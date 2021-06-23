@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "orecrop:redstone_fruit"
+    }
+  },
+  "result": {
+    "item": "minecraft:redstone",
+    "count": 8
+  }
+}

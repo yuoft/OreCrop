@@ -1,0 +1,92 @@
+{
+  "criteria": {
+    "coal_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+            "item": "orecrop:coal_nugget"
+          }]
+      }
+    },
+    "diamond_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+            "item": "orecrop:diamond_nugget"
+          }]
+      }
+    },
+    "emerald_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+            "item": "orecrop:emerald_nugget"
+          }]
+      }
+    },
+    "gold_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+            "item": "minecraft:gold_nugget"
+          }]
+      }
+    },
+    "iron_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+            "item": "minecraft:iron_nugget"
+          }]
+      }
+    },
+    "lapis_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+            "item": "orecrop:lapis_nugget"
+          }]
+      }
+    },
+    "quartz_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+            "item": "orecrop:quartz_nugget"
+          }]
+      }
+    },
+    "redstone_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+            "item": "orecrop:redstone_nugget"
+          }]
+      }
+    }
+  },
+  "rewards":{
+    "recipes": [
+      "orecrop:coal_nugget",
+      "orecrop:diamond_nugget",
+      "orecrop:emerald_nugget",
+      "orecrop:gold_nugget",
+      "orecrop:iron_nugget",
+      "orecrop:lapis_nugget",
+      "orecrop:quartz_nugget",
+      "orecrop:redstone_nugget"
+    ]
+  },
+  "requirements": [
+    [
+      "coal_nugget",
+      "diamond_nugget",
+      "emerald_nugget",
+      "gold_nugget",
+      "iron_nugget",
+      "lapis_nugget",
+      "quartz_nugget",
+      "redstone_nugget"
+    ]
+  ]
+}

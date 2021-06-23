@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:crop_seed"
+    },
+    "x": {
+      "item": "minecraft:quartz_block"
+    }
+  },
+  "result": {
+    "item": "orecrop:quartz_crop_seed"
+  }
+}

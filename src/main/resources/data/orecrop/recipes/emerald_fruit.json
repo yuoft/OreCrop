@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "orecrop:emerald_fruit"
+    }
+  },
+  "result": {
+    "item": "minecraft:emerald",
+    "count": 4
+  }
+}

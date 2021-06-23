@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "stem_seed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+            "item": "orecrop:stem_seed"
+          }]
+      }
+    }
+  },
+  "rewards":{
+    "recipes": [
+      "orecrop:coal_stem_seed",
+      "orecrop:diamond_stem_seed",
+      "orecrop:emerald_stem_seed",
+      "orecrop:gold_stem_seed",
+      "orecrop:iron_stem_seed",
+      "orecrop:lapis_stem_seed",
+      "orecrop:quartz_stem_seed",
+      "orecrop:crop_seed",
+      "orecrop:redstone_stem_seed"
+    ]
+  }
+}

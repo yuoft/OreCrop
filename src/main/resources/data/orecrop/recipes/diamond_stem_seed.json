@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:stem_seed"
+    },
+    "x": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "orecrop:diamond_stem_seed"
+  }
+}
