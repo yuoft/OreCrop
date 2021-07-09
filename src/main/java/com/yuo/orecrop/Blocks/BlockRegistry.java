@@ -2,8 +2,10 @@ package com.yuo.orecrop.Blocks;
 
 import com.yuo.orecrop.Blocks.Crop.OreCropBlock;
 import com.yuo.orecrop.Blocks.Stem.*;
+import com.yuo.orecrop.Blocks.Tree.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,6 +17,9 @@ public class BlockRegistry {
 	public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, com.yuo.orecrop.OreCrop.MODID);//DeferredRegister.create(ForgeRegistries.BLOCKS, "spacearms");
 	private static Block.Properties STEM = Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).tickRandomly().sound(SoundType.PLANT)
 				.doesNotBlockMovement();
+    public static final Block.Properties LOG = Block.Properties.from(Blocks.BIRCH_LOG); //树干
+    public static final Block.Properties LEAF = Block.Properties.from(Blocks.BIRCH_LEAVES); //树叶
+    public static final Block.Properties SAPLING = Block.Properties.from(Blocks.BIRCH_SAPLING); //树苗
     //作物
 	public static RegistryObject<Block> coalLeanOre = BLOCKS.register("coal_lean_ore", () -> {
 		return new CoalStemGrown(Block.Properties.from(Blocks.COAL_ORE));
@@ -115,5 +120,58 @@ public class BlockRegistry {
     });
     public static RegistryObject<Block> redstoneCrop = BLOCKS.register("redstone_crop", () -> {
         return new OreCropBlock(STEM);
+    });
+
+    //树木
+    public static RegistryObject<Block> oreLog = BLOCKS.register("ore_log", () -> {
+        return new LogBlock(MaterialColor.WOOD, LOG);
+    });
+    public static RegistryObject<Block> coalLeaf = BLOCKS.register("coal_leaf", () -> {
+        return new LeavesBlock(LEAF);
+    });
+    public static RegistryObject<Block> coalSapling = BLOCKS.register("coal_sapling", () -> {
+        return new OreSapling(() -> new CoalTree(), SAPLING);
+    });
+    public static RegistryObject<Block> diamondLeaf = BLOCKS.register("diamond_leaf", () -> {
+        return new LeavesBlock(LEAF);
+    });
+    public static RegistryObject<Block> diamondSapling = BLOCKS.register("diamond_sapling", () -> {
+        return new OreSapling(() -> new DiamondTree(), SAPLING);
+    });
+    public static RegistryObject<Block> emeraldLeaf = BLOCKS.register("emerald_leaf", () -> {
+        return new LeavesBlock(LEAF);
+    });
+    public static RegistryObject<Block> emeraldSapling = BLOCKS.register("emerald_sapling", () -> {
+        return new OreSapling(() -> new EmeraldTree(), SAPLING);
+    });
+    public static RegistryObject<Block> goldLeaf = BLOCKS.register("gold_leaf", () -> {
+        return new LeavesBlock(LEAF);
+    });
+    public static RegistryObject<Block> goldSapling = BLOCKS.register("gold_sapling", () -> {
+        return new OreSapling(() -> new GoldTree(), SAPLING);
+    });
+    public static RegistryObject<Block> ironLeaf = BLOCKS.register("iron_leaf", () -> {
+        return new LeavesBlock(LEAF);
+    });
+    public static RegistryObject<Block> ironSapling = BLOCKS.register("iron_sapling", () -> {
+        return new OreSapling(() -> new IronTree(), SAPLING);
+    });
+    public static RegistryObject<Block> lapisLeaf = BLOCKS.register("lapis_leaf", () -> {
+        return new LeavesBlock(LEAF);
+    });
+    public static RegistryObject<Block> lapisSapling = BLOCKS.register("lapis_sapling", () -> {
+        return new OreSapling(() -> new LapisTree(), SAPLING);
+    });
+    public static RegistryObject<Block> quartzLeaf = BLOCKS.register("quartz_leaf", () -> {
+        return new LeavesBlock(LEAF);
+    });
+    public static RegistryObject<Block> quartzSapling = BLOCKS.register("quartz_sapling", () -> {
+        return new OreSapling(() -> new QuartzTree(), SAPLING);
+    });
+    public static RegistryObject<Block> redstoneLeaf = BLOCKS.register("redstone_leaf", () -> {
+        return new LeavesBlock(LEAF);
+    });
+    public static RegistryObject<Block> redstoneSapling = BLOCKS.register("redstone_sapling", () -> {
+        return new OreSapling(() -> new RedstoneTree(), SAPLING);
     });
 }

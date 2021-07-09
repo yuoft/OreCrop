@@ -35,10 +35,4 @@ public class RedstoneStemGrown extends StemGrownBlock {
     public int getExpDrop(BlockState state, IWorldReader world, BlockPos pos, int fortune, int silktouch) {
         return MathHelper.nextInt(RANDOM, 1, 3);
     }
-    @Override
-    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        List<ItemStack> loots = new ArrayList<ItemStack>();
-        loots.add(new ItemStack(ItemRegistry.redstoneNugget.get(), RANDOM.nextInt(5) + 1));
-        return loots;
-    }
 }

@@ -7,11 +7,11 @@
   ],
   "key": {
     "x": {
-      "item": "orecrop:coal_fruit"
+      "item": "orecrop:diamond_fruit"
     }
   },
   "result": {
-    "item": "minecraft:coal",
-    "count": 8
+    "item": "minecraft:diamond",
+    "count": 4
   }
 }

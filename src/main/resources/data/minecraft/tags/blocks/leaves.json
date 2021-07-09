@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "orecrop:coal_leaf",
+    "orecrop:diamond_leaf",
+    "orecrop:emerald_leaf",
+    "orecrop:gold_leaf",
+    "orecrop:iron_leaf",
+    "orecrop:lapis_leaf",
+    "orecrop:quartz_leaf",
+    "orecrop:redstone_leaf"
+  ]
+}

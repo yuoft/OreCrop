@@ -139,4 +139,9 @@ public class OreCropBlock extends CropsBlock{
         }
         return ActionResultType.SUCCESS;
     }
+    //不能使用骨粉催熟
+    @Override
+    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
+        return false;
+    }
 }

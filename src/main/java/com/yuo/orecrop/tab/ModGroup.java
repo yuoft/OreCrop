@@ -12,7 +12,7 @@ public class ModGroup extends ItemGroup{
 	public static ModGroup myGroup = new ModGroup();
 
 	public ModGroup() {
-		super(12, "orecrop"); //页码11开始，名称
+		super( ItemGroup.GROUPS.length, "orecrop"); //页码11开始，名称
 	}
 	//图标
 	@Override

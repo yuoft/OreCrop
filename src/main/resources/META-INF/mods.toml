@@ -2,7 +2,7 @@ modLoader="javafml"
 loaderVersion="[31,)" 
 [[mods]] #mandatory
 modId="orecrop"
-version="1.0.2"
+version="1.0.3"
 displayName="OreCrop"
 authors="yuo" 
 description='''

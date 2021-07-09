@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "xxx",
+    "zxz",
     "xyx",
-    "xxx"
+    "zxz"
   ],
   "key": {
     "y": {
@@ -11,6 +11,9 @@
     },
     "x": {
       "item": "minecraft:quartz_block"
+    },
+    "z": {
+      "item": "minecraft:quartz"
     }
   },
   "result": {

@@ -35,10 +35,4 @@ public class DiamondStemGrown extends StemGrownBlock {
     public int getExpDrop(BlockState state, IWorldReader world, BlockPos pos, int fortune, int silktouch) {
         return MathHelper.nextInt(RANDOM, 2, 4);
     }
-    @Override
-    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        List<ItemStack> loots = new ArrayList<ItemStack>();
-        loots.add(new ItemStack(ItemRegistry.diamondNugget.get(), RANDOM.nextInt(3) + 1));
-        return loots;
-    }
 }

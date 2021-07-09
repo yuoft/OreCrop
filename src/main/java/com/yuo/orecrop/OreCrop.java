@@ -1,12 +1,12 @@
 package com.yuo.orecrop;
 
 import com.yuo.orecrop.Blocks.BlockRegistry;
+import com.yuo.orecrop.Blocks.Tree.OreSapling;
 import com.yuo.orecrop.Blocks.Stem.AttachedStemCrop;
 import com.yuo.orecrop.Blocks.Stem.StemCrop;
 import com.yuo.orecrop.Items.ItemRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.CropsBlock;
-import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,7 +30,8 @@ public class OreCrop {
     public void clientSetup(final FMLClientSetupEvent event) {
 	    //透明方块的渲染
         for (RegistryObject r : BlockRegistry.BLOCKS.getEntries()){
-            if (r.get() instanceof StemCrop || r.get() instanceof AttachedStemCrop || r.get() instanceof CropsBlock){
+            if (r.get() instanceof StemCrop || r.get() instanceof AttachedStemCrop
+                    || r.get() instanceof CropsBlock || r.get() instanceof OreSapling){
                 RenderTypeLookup.setRenderLayer((Block) r.get(), RenderType.getCutout());
             }
         }

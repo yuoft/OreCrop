@@ -16,6 +16,7 @@
 	"item.orecrop.quartz_fruit": "石英果实",
 	"item.orecrop.redstone_fruit": "红石果实",
 	"item.orecrop.crop_seed": "矿物种子",
+	"item.orecrop.ore_sapling": "矿石树木",
 	#方块
 	"block.orecrop.coal_stem": "煤贫矿种子",
 	"block.orecrop.diamond_stem": "钻石贫矿种子",
@@ -42,11 +43,30 @@
 	"block.orecrop.lapis_crop": "青金石作物",
 	"block.orecrop.quartz_crop": "石英作物",
 	"block.orecrop.redstone_crop": "红石作物",
+	"block.orecrop.coal_leaf": "煤炭树叶",
+	"block.orecrop.diamond_leaf": "钻石树叶",
+	"block.orecrop.emerald_leaf": "绿宝石树叶",
+	"block.orecrop.gold_leaf": "黄金树叶",
+	"block.orecrop.iron_leaf": "铁树叶",
+	"block.orecrop.lapis_leaf": "青金石树叶",
+	"block.orecrop.quartz_leaf": "石英树叶",
+	"block.orecrop.redstone_leaf": "红石树叶",
+	"block.orecrop.ore_log": "矿石木",
+	"block.orecrop.coal_sapling": "煤炭树苗",
+	"block.orecrop.diamond_sapling": "钻石树苗",
+	"block.orecrop.emerald_sapling": "绿宝石树苗",
+	"block.orecrop.gold_sapling": "黄金树苗",
+	"block.orecrop.iron_sapling": "铁树苗",
+	"block.orecrop.quartz_sapling": "石英树苗",
+	"block.orecrop.lapis_sapling": "青金石树苗",
+	"block.orecrop.redstone_sapling": "红石树苗",
 	#进度
 	"advancements.orecrop.stem_seed.title": "矿石作物?",
 	"advancements.orecrop.stem_seed.desc": "通过打草获得贫矿种子",
 	"advancements.orecrop.crop_seed.title": "真正的矿石作物",
 	"advancements.orecrop.crop_seed.desc": "收集八种矿物，合成矿物种子",
+	"advancements.orecrop.ore_sapling.title": "矿石树木",
+	"advancements.orecrop.ore_sapling.desc": "收集六种树苗，合成矿石树木",
 	#创造也
 	"itemGroup.orecrop": "矿石作物"
 }

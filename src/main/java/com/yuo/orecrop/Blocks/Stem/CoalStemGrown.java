@@ -34,11 +34,4 @@ public class CoalStemGrown extends StemGrownBlock {
     public int getExpDrop(BlockState state, IWorldReader world, BlockPos pos, int fortune, int silktouch) {
         return MathHelper.nextInt(RANDOM, 1, 2);
     }
-
-    @Override
-    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        List<ItemStack> loots = new ArrayList<ItemStack>();
-        loots.add(new ItemStack(ItemRegistry.coalNugget.get(), RANDOM.nextInt(3) + 1));
-        return loots;
-    }
 }
