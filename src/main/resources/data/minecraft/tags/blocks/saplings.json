@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "orecrop:coal_sapling",
+    "orecrop:diamond_sapling",
+    "orecrop:emerald_sapling",
+    "orecrop:gold_sapling",
+    "orecrop:iron_sapling",
+    "orecrop:lapis_sapling",
+    "orecrop:quartz_sapling",
+    "orecrop:netherite_sapling",
+    "orecrop:redstone_sapling"
+  ]
+}

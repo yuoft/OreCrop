@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=west": { "model": "orecrop:block/stem/diamond_stem" },
+        "facing=east": { "model": "orecrop:block/stem/diamond_stem", "y": 180 },
+        "facing=north": { "model": "orecrop:block/stem/diamond_stem", "y": 90 },
+        "facing=south": { "model": "orecrop:block/stem/diamond_stem", "y": 270 }
+    }
+}

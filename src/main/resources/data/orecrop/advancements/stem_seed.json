@@ -1,0 +1,30 @@
+{
+  "display": { 
+    "icon": { 
+      "item": "orecrop:stem_seed"
+    },
+    "title": {
+		"translate": "advancements.orecrop.stem_seed.title"
+	},
+    "description": {
+		"translate": "advancements.orecrop.stem_seed.desc"
+	},
+    "frame": "task",
+    "background": "orecrop:textures/block/diamond_lean_ore.png"
+  },
+  "criteria": { 
+    "ruby_ingot": {
+      "trigger": "minecraft:inventory_changed", 
+      "conditions": { 
+		"items":[
+			{
+				"item": "orecrop:stem_seed"
+			}
+		]
+      }
+    }
+  },
+  "rewards": { 
+    "experience": 10
+  }
+}

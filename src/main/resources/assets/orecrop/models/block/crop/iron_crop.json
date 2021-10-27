@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+		"cross": "orecrop:block/iron_crop"
+    }
+}

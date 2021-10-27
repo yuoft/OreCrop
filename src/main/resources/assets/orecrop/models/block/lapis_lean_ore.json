@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "orecrop:block/lapis_lean_ore"
+  }
+}

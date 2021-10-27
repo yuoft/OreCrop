@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "orecrop:block/gold_lean_ore"
+  }
+}
