@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "iceandfire"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:ore_sapling"
+    },
+    "x": {
+      "item": "iceandfire:silver_block"
+    }
+  },
+  "result": {
+    "item": "orecrop:silver_sapling"
+  }
+}
