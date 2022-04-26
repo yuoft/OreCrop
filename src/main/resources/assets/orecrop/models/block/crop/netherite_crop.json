@@ -1,5 +1,5 @@
 {
-    "parent": "block/cross",
+    "parent": "orecrop:block/cross",
     "textures": {
 		"cross": "orecrop:block/netherite_crop"
     }

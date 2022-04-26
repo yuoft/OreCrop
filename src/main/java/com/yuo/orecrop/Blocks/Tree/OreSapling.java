@@ -1,10 +1,11 @@
 package com.yuo.orecrop.Blocks.Tree;
 
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.IGrowable;
+import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.trees.Tree;
-import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
@@ -13,7 +14,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class OreSapling extends SaplingBlock implements IGrowable {
 
@@ -48,7 +48,7 @@ public class OreSapling extends SaplingBlock implements IGrowable {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (world.getLight(pos.up()) >= 9 && random.nextInt(7) == 0) {
             if (!world.isAreaLoaded(pos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
-            this.placeTree(world, pos, state, random);
+                this.placeTree(world, pos, state, random);
         }
     }
 

@@ -23,6 +23,13 @@ public enum TreeFeatureConfig implements IFeatureConfig {
     LAPIS_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.lapisLeaf.get().getDefaultState(), "lapis_tree"),
     QUARTZ_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.quartzLeaf.get().getDefaultState(), "quartz_tree"),
     NETHERITE_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.netheriteLeaf.get().getDefaultState(), "netherite_tree"),
+    RUBY_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.rubyLeaf.get().getDefaultState(), "ruby_tree"),
+    DRAGON_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.dragonLeaf.get().getDefaultState(), "dragon_tree"),
+    XRAY_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.xrayLeaf.get().getDefaultState(), "xray_tree"),
+    SUPER_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.superLeaf.get().getDefaultState(), "super_tree"),
+    SPACE_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.spaceLeaf.get().getDefaultState(), "space_tree"),
+    SILVER_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.silverLeaf.get().getDefaultState(), "silver_tree"),
+    COPPER_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.copperLeaf.get().getDefaultState(), "copper_tree"),
     REDSTONE_TREE(BlockRegistry.oreLog.get().getDefaultState(), BlockRegistry.redstoneLeaf.get().getDefaultState(), "redstone_tree");
 
     private final BlockState log;
@@ -30,7 +37,7 @@ public enum TreeFeatureConfig implements IFeatureConfig {
     private final String name;
     private final BaseTreeFeatureConfig config;
 
-    private TreeFeatureConfig(BlockState logIn, BlockState leavesIn, String name){
+    TreeFeatureConfig(BlockState logIn, BlockState leavesIn, String name){
         this.log = logIn;
         this.leaves = leavesIn;
         this.name = name;
