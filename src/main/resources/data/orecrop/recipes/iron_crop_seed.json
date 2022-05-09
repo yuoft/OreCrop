@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zxz",
+    "xyx",
+    "zxz"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:crop_seed"
+    },
+    "x": {
+      "item": "minecraft:iron_block"
+    },
+    "z": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "orecrop:iron_crop_seed"
+  }
+}

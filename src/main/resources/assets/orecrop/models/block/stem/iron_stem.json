@@ -1,0 +1,7 @@
+{
+    "parent": "block/stem_fruit",
+    "textures": {
+        "stem": "orecrop:block/iron_stem",
+        "upperstem": "orecrop:block/att_iron_stem"
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "spacearms"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zxz",
+    "xyx",
+    "zxz"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:crop_seed"
+    },
+    "x": {
+      "item": "spacearms:space_block"
+    },
+    "z": {
+      "item": "spacearms:space_ingot"
+    }
+  },
+  "result": {
+    "item": "orecrop:space_crop_seed"
+  }
+}
