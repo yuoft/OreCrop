@@ -25,7 +25,7 @@ import java.util.UUID;
 /**
  * 事件处理类
  */
-@Mod.EventBusSubscriber(value = Dist.CLIENT, modid = OreCrop.MODID)
+@Mod.EventBusSubscriber(modid = OreCrop.MODID)
 public class EventHandler {
     //贫矿种子掉落
     @SubscribeEvent

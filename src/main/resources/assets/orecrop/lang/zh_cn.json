@@ -1,5 +1,4 @@
 {
-	#物品
 	"item.orecrop.stem_seed": "贫矿种子",
 	"item.orecrop.coal_nugget": "小戳煤粉",
 	"item.orecrop.diamond_nugget": "钻石粒",
@@ -56,7 +55,7 @@
 	"item.orecrop.space_crop_seed": "空间作物种子",
 	"item.orecrop.silver_crop_seed": "银作物种子",
 	"item.orecrop.copper_crop_seed": "铜作物种子",
-	#方块
+
 	"block.orecrop.coal_stem": "煤贫矿种子",
 	"block.orecrop.diamond_stem": "钻石贫矿种子",
 	"block.orecrop.emerald_stem": "绿宝石贫矿种子",
@@ -126,15 +125,15 @@
 	"block.orecrop.space_sapling": "空间树苗",
 	"block.orecrop.silver_sapling": "银树苗",
 	"block.orecrop.copper_sapling": "铜树苗",
-	#进度
+
 	"advancements.orecrop.stem_seed.title": "矿石作物?",
 	"advancements.orecrop.stem_seed.desc": "通过打草获得贫矿种子",
 	"advancements.orecrop.crop_seed.title": "真正的矿石作物",
 	"advancements.orecrop.crop_seed.desc": "收集八种矿物，合成矿物种子",
 	"advancements.orecrop.ore_sapling.title": "矿石树木",
 	"advancements.orecrop.ore_sapling.desc": "收集六种树苗，合成矿石树木",
-	"orecrop.message.login"="§b欢迎游玩本模组[矿石作物]，问题反馈§a点击此处!",
-	"orecrop.message.login0"="§ahttps://space.bilibili.com/21854371",
-	#创造也
+	"orecrop.message.login":"§b欢迎游玩本模组[矿石作物]，问题反馈§a点击此处!",
+	"orecrop.message.login0":"§ahttps://space.bilibili.com/21854371",
+
 	"itemGroup.orecrop": "矿石作物"
 }
