@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "orecrop:gold_lean_ore"
-  },
-  "result": "minecraft:gold_nugget",
-  "experience": 0.25,
-  "cookingtime": 50
-}

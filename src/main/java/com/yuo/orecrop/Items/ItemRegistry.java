@@ -17,7 +17,7 @@ public class ItemRegistry {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, OreCrop.MODID);
 	public static final Item.Properties GROUP = new Item.Properties().group(ModGroup.myGroup);
 	//注册物品。一个是「注册名」，还有一个就是你要注册对象的实例
-	public static RegistryObject<Item> stemSeed = ITEMS.register("stem_seed", OrdinaryItem::new);
+	public static RegistryObject<Item> voidSeed = ITEMS.register("void_seed", OrdinaryItem::new);
 	public static RegistryObject<Item> diamondNugget = ITEMS.register("diamond_nugget", OrdinaryItem::new);
 	public static RegistryObject<Item> emeraldNugget = ITEMS.register("emerald_nugget", OrdinaryItem::new);
 	public static RegistryObject<Item> lapisNugget = ITEMS.register("lapis_nugget", OrdinaryItem::new);
@@ -38,44 +38,8 @@ public class ItemRegistry {
 	public static RegistryObject<Item> oreSapling = ITEMS.register("ore_sapling", OrdinaryItem::new);
 
 	//注册方块物品
-	public static RegistryObject<BlockItem> coalLeanOre = ITEMS.register("coal_lean_ore",
-			() -> new BlockItem(BlockRegistry.coalLeanOre.get(), GROUP));
-	public static RegistryObject<BlockItem> diamondLeanOre = ITEMS.register("diamond_lean_ore",
-			() -> new BlockItem(BlockRegistry.diamondLeanOre.get(), GROUP));
-	public static RegistryObject<BlockItem> emeraldLeanOre = ITEMS.register("emerald_lean_ore",
-			() -> new BlockItem(BlockRegistry.emeraldLeanOre.get(), GROUP));
-	public static RegistryObject<BlockItem> goldLeanOre = ITEMS.register("gold_lean_ore",
-			() -> new BlockItem(BlockRegistry.goldLeanOre.get(), GROUP));
-	public static RegistryObject<BlockItem> ironLeanOre = ITEMS.register("iron_lean_ore",
-			() -> new BlockItem(BlockRegistry.ironLeanOre.get(), GROUP));
-	public static RegistryObject<BlockItem> lapisLeanOre = ITEMS.register("lapis_lean_ore",
-			() -> new BlockItem(BlockRegistry.lapisLeanOre.get(), GROUP));
-	public static RegistryObject<BlockItem> quartzLeanOre = ITEMS.register("quartz_lean_ore",
-			() -> new BlockItem(BlockRegistry.quartzLeanOre.get(), GROUP));
-	public static RegistryObject<BlockItem> redstoneLeanOre = ITEMS.register("redstone_lean_ore",
-			() -> new BlockItem(BlockRegistry.redstoneLeanOre.get(), GROUP));
-	public static RegistryObject<BlockItem> netheriteLeanOre = ITEMS.register("netherite_lean_ore",
-			() -> new BlockItem(BlockRegistry.netheriteLeanOre.get(), GROUP));
-
-	//茎作物种子
-	public static RegistryObject<BlockItem> coalStemSeed = ITEMS.register("coal_stem_seed",
-			() -> new BlockNamedItem(BlockRegistry.coalStem.get(), GROUP));
-	public static RegistryObject<BlockItem> diamondStemSeed = ITEMS.register("diamond_stem_seed",
-			() -> new BlockNamedItem(BlockRegistry.diamondStem.get(), GROUP));
-	public static RegistryObject<BlockItem> emeraldStemSeed = ITEMS.register("emerald_stem_seed",
-			() -> new BlockNamedItem(BlockRegistry.emeraldStem.get(), GROUP));
-	public static RegistryObject<BlockItem> goldStemSeed = ITEMS.register("gold_stem_seed",
-			() -> new BlockNamedItem(BlockRegistry.goldStem.get(), GROUP));
-	public static RegistryObject<BlockItem> ironStemSeed = ITEMS.register("iron_stem_seed",
-			() -> new BlockNamedItem(BlockRegistry.ironStem.get(), GROUP));
-	public static RegistryObject<BlockItem> lapisStemSeed = ITEMS.register("lapis_stem_seed",
-			() -> new BlockNamedItem(BlockRegistry.lapisStem.get(), GROUP));
-	public static RegistryObject<BlockItem> quartzStemSeed = ITEMS.register("quartz_stem_seed",
-			() -> new BlockNamedItem(BlockRegistry.quartzStem.get(), GROUP));
-	public static RegistryObject<BlockItem> redstoneStemSeed = ITEMS.register("redstone_stem_seed",
-			() -> new BlockNamedItem(BlockRegistry.redstoneStem.get(), GROUP));
-	public static RegistryObject<BlockItem> netheriteStemSeed = ITEMS.register("netherite_stem_seed",
-			() -> new BlockNamedItem(BlockRegistry.netheriteStem.get(), GROUP));
+//	public static RegistryObject<BlockItem> coalLeanOre = ITEMS.register("coal_lean_ore",
+//			() -> new BlockItem(BlockRegistry.coalLeanOre.get(), GROUP));
 
 	//普通作物种子
 	public static RegistryObject<BlockItem> coalCropSeed = ITEMS.register("coal_crop_seed",

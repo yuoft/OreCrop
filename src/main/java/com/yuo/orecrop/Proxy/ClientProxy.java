@@ -1,8 +1,6 @@
 package com.yuo.orecrop.Proxy;
 
 import com.yuo.orecrop.Blocks.BlockRegistry;
-import com.yuo.orecrop.Blocks.Stem.AttachedStemCrop;
-import com.yuo.orecrop.Blocks.Stem.StemCrop;
 import com.yuo.orecrop.Blocks.Tree.OreSapling;
 import net.minecraft.block.Block;
 import net.minecraft.block.CropsBlock;
@@ -29,10 +27,8 @@ public class ClientProxy implements IProxy {
     public void clientSetup(final FMLClientSetupEvent event) {
         //透明方块的渲染
         for (RegistryObject<Block> entry : BlockRegistry.BLOCKS.getEntries()){
-            if (entry.get() instanceof StemCrop || entry.get() instanceof AttachedStemCrop
-                    || entry.get() instanceof CropsBlock || entry.get() instanceof OreSapling){
+            if (entry.get() instanceof CropsBlock || entry.get() instanceof OreSapling)
                 RenderTypeLookup.setRenderLayer(entry.get(), RenderType.getCutout());
-            }
         }
     }
 }

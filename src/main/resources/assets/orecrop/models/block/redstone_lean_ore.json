@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "orecrop:block/redstone_lean_ore"
-  }
-}

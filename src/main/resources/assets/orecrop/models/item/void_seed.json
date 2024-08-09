@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "orecrop:item/redstone_stem_seed"
+        "layer0": "orecrop:item/void_seed"
     }
 }

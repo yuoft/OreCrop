@@ -1,16 +1,16 @@
 {
   "display": { 
     "icon": { 
-      "item": "orecrop:stem_seed"
+      "item": "orecrop:void_seed"
     },
     "title": {
-		"translate": "advancements.orecrop.stem_seed.title"
+		"translate": "advancements.orecrop.void_seed.title"
 	},
     "description": {
-		"translate": "advancements.orecrop.stem_seed.desc"
+		"translate": "advancements.orecrop.void_seed.desc"
 	},
     "frame": "task",
-    "background": "orecrop:textures/block/diamond_lean_ore.png"
+    "background": "textures/block/diamond_ore.png"
   },
   "criteria": { 
     "ruby_ingot": {
@@ -18,7 +18,7 @@
       "conditions": { 
 		"items":[
 			{
-				"item": "orecrop:stem_seed"
+				"item": "orecrop:void_seed"
 			}
 		]
       }

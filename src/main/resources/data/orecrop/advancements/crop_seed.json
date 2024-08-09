@@ -1,5 +1,5 @@
 {
-  "parent": "orecrop:stem_seed",
+  "parent": "orecrop:void_seed",
   "display": { 
     "icon": { 
       "item": "orecrop:crop_seed"

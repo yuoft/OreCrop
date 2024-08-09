@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "orecrop:item/diamond_stem_seed"
-    }
-}

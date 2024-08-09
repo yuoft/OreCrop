@@ -1,7 +1,6 @@
 package com.yuo.orecrop.Blocks;
 
 import com.yuo.orecrop.Blocks.Crop.OreCropBlock;
-import com.yuo.orecrop.Blocks.Stem.*;
 import com.yuo.orecrop.Blocks.Tree.ModTrees;
 import com.yuo.orecrop.Blocks.Tree.OreSapling;
 import net.minecraft.block.*;
@@ -15,41 +14,11 @@ public class BlockRegistry {
 	//同物品
 	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, com.yuo.orecrop.OreCrop.MODID);
-	private static Block.Properties STEM = Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).tickRandomly().sound(SoundType.PLANT)
+	private static final Block.Properties STEM = Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.0f).tickRandomly().sound(SoundType.PLANT)
 				.doesNotBlockMovement();
     public static final Block.Properties LOG = Block.Properties.from(Blocks.BIRCH_LOG); //树干
     public static final Block.Properties LEAF = Block.Properties.from(Blocks.BIRCH_LEAVES); //树叶
     public static final Block.Properties SAPLING = Block.Properties.from(Blocks.BIRCH_SAPLING); //树苗
-    //作物
-	public static RegistryObject<Block> coalLeanOre = BLOCKS.register("coal_lean_ore", () -> new CoalStemGrown(Block.Properties.from(Blocks.COAL_ORE)));
-	public static RegistryObject<Block> diamondLeanOre = BLOCKS.register("diamond_lean_ore", () -> new DiamondStemGrown(Block.Properties.from(Blocks.DIAMOND_ORE)));
-	public static RegistryObject<Block> emeraldLeanOre = BLOCKS.register("emerald_lean_ore", () -> new EmeraldStemGrown(Block.Properties.from(Blocks.EMERALD_ORE)));
-	public static RegistryObject<Block> goldLeanOre = BLOCKS.register("gold_lean_ore", () -> new GoldStemGrown(Block.Properties.from(Blocks.GOLD_ORE)));
-	public static RegistryObject<Block> ironLeanOre = BLOCKS.register("iron_lean_ore", () -> new IronStemGrown(Block.Properties.from(Blocks.IRON_ORE)));
-	public static RegistryObject<Block> lapisLeanOre = BLOCKS.register("lapis_lean_ore", () -> new LapisStemGrown(Block.Properties.from(Blocks.LAPIS_ORE)));
-	public static RegistryObject<Block> quartzLeanOre = BLOCKS.register("quartz_lean_ore", () -> new QuartzStemGrown(Block.Properties.from(Blocks.NETHER_QUARTZ_ORE)));
-	public static RegistryObject<Block> redstoneLeanOre = BLOCKS.register("redstone_lean_ore", () -> new RedstoneStemGrown(Block.Properties.from(Blocks.REDSTONE_BLOCK)));
-    public static RegistryObject<Block> netheriteLeanOre = BLOCKS.register("netherite_lean_ore", () -> new NetheriteStemGrown(Block.Properties.from(Blocks.ANCIENT_DEBRIS)));
-	//作物 连接茎
-    public static RegistryObject<Block> attCoalStem = BLOCKS.register("att_coal_stem", () -> new AttachedStemCrop((StemGrownBlock) coalLeanOre.get(),STEM));
-    public static RegistryObject<Block> attDiamondStem = BLOCKS.register("att_diamond_stem", () -> new AttachedStemCrop((StemGrownBlock) diamondLeanOre.get(),STEM));
-    public static RegistryObject<Block> attEmeraldStem = BLOCKS.register("att_emerald_stem", () -> new AttachedStemCrop((StemGrownBlock) emeraldLeanOre.get(),STEM));
-    public static RegistryObject<Block> attGoldStem = BLOCKS.register("att_gold_stem", () -> new AttachedStemCrop((StemGrownBlock) goldLeanOre.get(),STEM));
-    public static RegistryObject<Block> attIronlStem = BLOCKS.register("att_iron_stem", () -> new AttachedStemCrop((StemGrownBlock) ironLeanOre.get(),STEM));
-    public static RegistryObject<Block> attLapisStem = BLOCKS.register("att_lapis_stem", () -> new AttachedStemCrop((StemGrownBlock) lapisLeanOre.get(),STEM));
-    public static RegistryObject<Block> attQuartzStem = BLOCKS.register("att_quartz_stem", () -> new AttachedStemCrop((StemGrownBlock) quartzLeanOre.get(),STEM));
-    public static RegistryObject<Block> attRedstoneStem = BLOCKS.register("att_redstone_stem", () -> new AttachedStemCrop((StemGrownBlock) redstoneLeanOre.get(),STEM));
-    public static RegistryObject<Block> attNetheriteStem = BLOCKS.register("att_netherite_stem", () -> new AttachedStemCrop((StemGrownBlock) netheriteLeanOre.get(),STEM));
-    //作物方块 茎
-    public static RegistryObject<Block> coalStem = BLOCKS.register("coal_stem", () -> new StemCrop(STEM, (StemGrownBlock) coalLeanOre.get()));
-    public static RegistryObject<Block> diamondStem = BLOCKS.register("diamond_stem", () -> new StemCrop(STEM, (StemGrownBlock) diamondLeanOre.get()));
-    public static RegistryObject<Block> emeraldStem = BLOCKS.register("emerald_stem", () -> new StemCrop(STEM, (StemGrownBlock) emeraldLeanOre.get()));
-    public static RegistryObject<Block> goldStem = BLOCKS.register("gold_stem", () -> new StemCrop(STEM, (StemGrownBlock) goldLeanOre.get()));
-    public static RegistryObject<Block> ironStem = BLOCKS.register("iron_stem", () -> new StemCrop(STEM, (StemGrownBlock) ironLeanOre.get()));
-    public static RegistryObject<Block> lapisStem = BLOCKS.register("lapis_stem", () -> new StemCrop(STEM, (StemGrownBlock) lapisLeanOre.get()));
-    public static RegistryObject<Block> quartzStem = BLOCKS.register("quartz_stem", () -> new StemCrop(STEM, (StemGrownBlock) quartzLeanOre.get()));
-    public static RegistryObject<Block> redstoneStem = BLOCKS.register("redstone_stem", () -> new StemCrop(STEM, (StemGrownBlock) redstoneLeanOre.get()));
-    public static RegistryObject<Block> netheriteStem = BLOCKS.register("netherite_stem", () -> new StemCrop(STEM, (StemGrownBlock) netheriteLeanOre.get()));
 
     //普通作物
     public static RegistryObject<Block> coalCrop = BLOCKS.register("coal_crop", () -> new OreCropBlock(STEM));

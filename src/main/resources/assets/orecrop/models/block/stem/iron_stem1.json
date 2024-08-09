@@ -1,6 +1,0 @@
-{
-    "parent": "block/stem_growth1",
-    "textures": {
-		"stem": "orecrop:block/iron_stem"
-    }
-}

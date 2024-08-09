@@ -3,7 +3,7 @@
   "pattern": [
     "xyz",
     "mno",
-    "   "
+    "ab "
   ],
   "key": {
     "x": {
@@ -20,6 +20,12 @@
     },
     "n": {
       "item": "minecraft:acacia_sapling"
+    },
+    "a": {
+      "item": "minecraft:crimson_fungus"
+    },
+    "b": {
+      "item": "minecraft:warped_fungus"
     },
     "o": {
       "item": "minecraft:dark_oak_sapling"

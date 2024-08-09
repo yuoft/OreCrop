@@ -17,12 +17,14 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.16.5-1.2.6'
+version = '1.16.5-1.2.7'
 group = 'com.github.yuoft' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'OreCrop'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
-
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
 //    mappings channel: 'official', version: '1.16.5'
@@ -87,12 +89,12 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
 
     runtimeOnly fg.deobf("curse.maven:jei-238222:3681294") //引入mod
-//    runtimeOnly fg.deobf("com.github.alexthe666.citadel:citadel:1.8.1-1.16.5")
+    runtimeOnly fg.deobf("com.github.alexthe666.citadel:citadel:1.8.1-1.16.5")
+    runtimeOnly fg.deobf("com.yuo.spacearms:spacearms:1.16.5-1.4.1")
+    runtimeOnly fg.deobf("com.github.alexthe666.iceandfire:iceandfire:2.1.9-1.16.5")
 
     compileOnly fg.deobf("com.yuo.spacearms:spacearms:1.16.5-1.4.1") //联动
     compileOnly fg.deobf("com.github.alexthe666.iceandfire:iceandfire:2.1.9-1.16.5")
-    runtimeOnly fg.deobf("com.yuo.spacearms:spacearms:1.16.5-1.4.1")
-//    runtimeOnly fg.deobf("com.github.alexthe666.iceandfire:iceandfire:2.1.9-1.16.5")
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
@@ -101,7 +103,7 @@ jar {
         attributes([
             "Specification-Title": "orecrop",
             "Specification-Vendor": "yuoft",
-            "Specification-Version": "1.0.0", // We are version 1 of ourselves
+            "Specification-Version": "1.2.7", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"yuoft",
