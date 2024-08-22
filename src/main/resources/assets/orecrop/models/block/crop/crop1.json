@@ -1,6 +1,6 @@
 {
-    "parent": "orecrop:block/cross",
-    "textures": {
-		"cross": "orecrop:block/crop1"
-    }
+  "parent": "orecrop:block/cross",
+  "textures": {
+    "cross": "minecraft:block/sweet_berry_bush_stage1"
+  }
 }

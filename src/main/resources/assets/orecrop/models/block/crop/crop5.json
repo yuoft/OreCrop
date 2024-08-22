@@ -1,6 +1,0 @@
-{
-    "parent": "orecrop:block/cross",
-    "textures": {
-		"cross": "orecrop:block/crop3"
-    }
-}

@@ -5,32 +5,31 @@ import com.yuo.orecrop.Items.ItemRegistry;
 import com.yuo.orecrop.OreCrop;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.CropsBlock;
+import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.Hand;
+import net.minecraft.state.IntegerProperty;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class OreCropBlock extends CropsBlock{
+public class OreCropBlock extends SweetBerryBushBlock {
 
     public OreCropBlock(Properties builder) {
         super(builder);
@@ -52,7 +51,7 @@ public class OreCropBlock extends CropsBlock{
     //破坏掉落
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        if (getAge(state) < 7) return Collections.singletonList(new ItemStack(this)); //不成熟，不掉落产物
+        if (getAge(state) < 3) return Collections.singletonList(new ItemStack(this)); //不成熟，不掉落产物
         Item item = null;
         Block block = state.getBlock();
         if (block.equals(BlockRegistry.coalCrop.get())) item = ItemRegistry.coalFruit.get();
@@ -84,40 +83,16 @@ public class OreCropBlock extends CropsBlock{
 
     //生长时间不同
     @Override
-    public void grow(World worldIn, BlockPos pos, BlockState state) {
-        Block block = state.getBlock();
-        int k = 0;
-        if (block.equals(BlockRegistry.coalCrop.get()) || block.equals(BlockRegistry.quartzCrop.get())
-                || block.equals(BlockRegistry.lapisCrop.get()))
-            k = MathHelper.nextInt(RANDOM, 2, 5);
-        else if (block.equals(BlockRegistry.diamondCrop.get()) || block.equals(BlockRegistry.emeraldCrop.get()))
-            k = MathHelper.nextInt(RANDOM, 1, 4);
-        else if (block.equals(BlockRegistry.netheriteCrop.get()))
-            k = MathHelper.nextInt(RANDOM, 1, 3);
-        else if (OreCrop.IS_SPACE_ARMS){
-            if (block.equals(BlockRegistry.rubyCrop.get())){
-                k = MathHelper.nextInt(RANDOM, 1, 4);
-            }else if (block.equals(BlockRegistry.xrayCrop.get()) || block.equals(BlockRegistry.dragonCrop.get())){
-                k = MathHelper.nextInt(RANDOM, 0, 3);
-            }else if (block.equals(BlockRegistry.superCrop.get()) || block.equals(BlockRegistry.spaceCrop.get())){
-                k = MathHelper.nextInt(RANDOM, 0, 2);
-            }
-        }else if (OreCrop.IS_ICE_AND_FIRE){
-            if (block.equals(BlockRegistry.silverCrop.get()) || block.equals(BlockRegistry.copperCrop.get())){
-                k = MathHelper.nextInt(RANDOM, 1, 4);
-            }
-        } else k = MathHelper.nextInt(RANDOM, 2, 4);
-        int i = this.getAge(state) + k;
-        int j = this.getMaxAge();
-        if (i > j) {
-            i = j;
-        }
-        worldIn.setBlockState(pos, this.withAge(i), 2);
+    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
+        int i = Math.min(this.getMaxAge(), this.getAge(state) + random.nextInt(2));
+        world.setBlockState(pos, this.withAge(i), 2);
     }
+
+
     //玩家右键矿石作物收获
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (getAge(state) != 7) return ActionResultType.FAIL;
+        if (getAge(state) != 3) return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         if (state.getBlock() instanceof OreCropBlock && !worldIn.isRemote){
             Block block = state.getBlock();
             Item item = null;
@@ -191,17 +166,16 @@ public class OreCropBlock extends CropsBlock{
                     blockItem = ItemRegistry.copperCropSeed.get();
                 }
             }
+
             int fortune = EnchantmentHelper.getEnchantmentLevel(Enchantments.FORTUNE, player.getActiveItemStack());
-            ItemStack stack = new ItemStack(item, MathHelper.nextInt(RANDOM, 1 + MathHelper.nextInt(RANDOM, 0, fortune),
-                    8 + 3 * (MathHelper.nextInt(RANDOM, 0, fortune) + 1)));
-            OreCropBlock block1 = (OreCropBlock) state.getBlock();
-            worldIn.setBlockState(pos, block1.withAge(0), 2); //设置作物为初始状态
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), stack);
-            worldIn.addEntity(itemEntity);
+            int num = MathHelper.nextInt(RANDOM, 1 + MathHelper.nextInt(RANDOM, 0, fortune),
+                    8 + 3 * (MathHelper.nextInt(RANDOM, 0, fortune) + 1));
+            spawnAsEntity(worldIn, pos, new ItemStack(item, num));
+            worldIn.playSound(null, pos, SoundEvents.ITEM_SWEET_BERRIES_PICK_FROM_BUSH, SoundCategory.BLOCKS, 1.0F, 0.8F + worldIn.rand.nextFloat() * 0.4F);
+            worldIn.setBlockState(pos, state.with(AGE, 0), 2);//设置作物为初始状态
+
             if (RANDOM.nextDouble() > 0.9d - 0.06 * fortune){ //5%概率额外掉落种子
-                ItemStack stack1 = new ItemStack(blockItem, MathHelper.nextInt(RANDOM, 0, 4) + RANDOM.nextInt(fortune));
-                ItemEntity itemEntity1 = new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), stack1);
-                worldIn.addEntity(itemEntity1);
+                spawnAsEntity(worldIn, pos, new ItemStack(blockItem, 1));
             }
         }
         return ActionResultType.SUCCESS;
@@ -210,5 +184,21 @@ public class OreCropBlock extends CropsBlock{
     @Override
     public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
         return false;
+    }
+
+    public int getMaxAge() {
+        return 3;
+    }
+
+    protected int getAge(BlockState state) {
+        return state.get(this.getAgeProperty());
+    }
+
+    public BlockState withAge(int i) {
+        return this.getDefaultState().with(this.getAgeProperty(), i);
+    }
+
+    public IntegerProperty getAgeProperty() {
+        return AGE;
     }
 }

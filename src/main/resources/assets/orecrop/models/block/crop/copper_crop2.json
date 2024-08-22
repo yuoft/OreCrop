@@ -1,0 +1,6 @@
+{
+    "parent": "orecrop:block/cross",
+    "textures": {
+		"cross": "orecrop:block/copper_crop2"
+    }
+}

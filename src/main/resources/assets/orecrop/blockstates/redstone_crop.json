@@ -1,12 +1,8 @@
 {
-    "variants": {
-        "age=0": { "model": "orecrop:block/crop/crop0" },
-        "age=1": { "model": "orecrop:block/crop/crop1" },
-        "age=2": { "model": "orecrop:block/crop/crop2" },
-        "age=3": { "model": "orecrop:block/crop/crop3" },
-        "age=4": { "model": "orecrop:block/crop/crop4" },
-        "age=5": { "model": "orecrop:block/crop/crop5" },
-		"age=6": { "model": "orecrop:block/crop/crop6" },
-		"age=7": { "model": "orecrop:block/crop/redstone_crop" }
-    }
+  "variants": {
+    "age=0": { "model": "orecrop:block/crop/crop0" },
+    "age=1": { "model": "orecrop:block/crop/crop1" },
+    "age=2": { "model": "orecrop:block/crop/redstone_crop1" },
+    "age=3": { "model": "orecrop:block/crop/redstone_crop2" }
+  }
 }
