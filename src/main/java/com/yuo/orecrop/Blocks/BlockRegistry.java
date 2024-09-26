@@ -1,6 +1,7 @@
 package com.yuo.orecrop.Blocks;
 
 import com.yuo.orecrop.Blocks.Crop.OreCropBlock;
+import com.yuo.orecrop.Blocks.Tree.CustomSapling;
 import com.yuo.orecrop.Blocks.Tree.ModTrees;
 import com.yuo.orecrop.Blocks.Tree.OreSapling;
 import net.minecraft.block.*;
@@ -30,6 +31,8 @@ public class BlockRegistry {
     public static RegistryObject<Block> quartzCrop = BLOCKS.register("quartz_crop", () -> new OreCropBlock(STEM));
     public static RegistryObject<Block> redstoneCrop = BLOCKS.register("redstone_crop", () -> new OreCropBlock(STEM));
     public static RegistryObject<Block> netheriteCrop = BLOCKS.register("netherite_crop", () -> new OreCropBlock(STEM));
+
+    public static RegistryObject<Block> customSapling = BLOCKS.register("custom_sapling", CustomSapling::new);
 
     //树木
     public static RegistryObject<Block> oreLog = BLOCKS.register("ore_log", () -> new RotatedPillarBlock(LOG));

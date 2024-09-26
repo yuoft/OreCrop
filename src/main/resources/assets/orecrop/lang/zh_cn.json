@@ -46,6 +46,7 @@
 	"item.orecrop.space_crop_seed": "空间作物种子",
 	"item.orecrop.silver_crop_seed": "银作物种子",
 	"item.orecrop.copper_crop_seed": "铜作物种子",
+	"item.orecrop.custom_sapling": "自定义树苗",
 
 	"block.orecrop.coal_crop": "煤作物",
 	"block.orecrop.diamond_crop": "钻石作物",
@@ -96,6 +97,7 @@
 	"block.orecrop.space_sapling": "空间树苗",
 	"block.orecrop.silver_sapling": "银树苗",
 	"block.orecrop.copper_sapling": "铜树苗",
+	"block.orecrop.custom_sapling": "自定义树苗",
 
 	"advancements.orecrop.void_seed.title": "矿石作物?",
 	"advancements.orecrop.void_seed.desc": "破坏草获得空白种子",

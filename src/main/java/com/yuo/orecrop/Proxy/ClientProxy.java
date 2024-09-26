@@ -31,5 +31,7 @@ public class ClientProxy implements IProxy {
             if (entry.get() instanceof SweetBerryBushBlock || entry.get() instanceof OreSapling)
                 RenderTypeLookup.setRenderLayer(entry.get(), RenderType.getCutout());
         }
+
+        RenderTypeLookup.setRenderLayer(BlockRegistry.customSapling.get(), RenderType.getCutout());
     }
 }

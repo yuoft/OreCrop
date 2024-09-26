@@ -13,7 +13,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 //物品注册管理器
 public class ItemRegistry {
 	//创建注册器。ForgeRegistries.ITEMS代表了我们要注册的是物品，第二个参数填入的应该是你的modId。
-	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, OreCrop.MODID);
 	public static final Item.Properties GROUP = new Item.Properties().group(ModGroup.myGroup);
 	//注册物品。一个是「注册名」，还有一个就是你要注册对象的实例
@@ -40,6 +39,9 @@ public class ItemRegistry {
 	//注册方块物品
 //	public static RegistryObject<BlockItem> coalLeanOre = ITEMS.register("coal_lean_ore",
 //			() -> new BlockItem(BlockRegistry.coalLeanOre.get(), GROUP));
+
+	public static RegistryObject<BlockItem> customSapling = ITEMS.register("custom_sapling",
+			() -> new CustomSapling(BlockRegistry.customSapling.get(), GROUP));
 
 	//普通作物种子
 	public static RegistryObject<BlockItem> coalCropSeed = ITEMS.register("coal_crop_seed",

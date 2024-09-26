@@ -46,6 +46,7 @@
 	"item.orecrop.space_crop_seed": "Space Crop Seed",
 	"item.orecrop.silver_crop_seed": "Silver Crop Seed",
 	"item.orecrop.copper_crop_seed": "Copper Crop Seed",
+	"item.orecrop.custom_sapling": "Custom Sapling",
 
 	"block.orecrop.coal_crop": "Coal Crop",
 	"block.orecrop.diamond_crop": "Diamond Crop",
@@ -96,6 +97,7 @@
 	"block.orecrop.space_sapling": "Space Sapling",
 	"block.orecrop.silver_sapling": "Silver Sapling",
 	"block.orecrop.copper_sapling": "Copper Sapling",
+	"block.orecrop.custom_sapling": "Custom Sapling",
 
 	"advancements.orecrop.void_seed.title": "Mineral crops?",
 	"advancements.orecrop.void_seed.desc": "Destroy grass to obtain blank seeds",
