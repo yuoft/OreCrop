@@ -46,9 +46,9 @@ public class OreSapling extends SaplingBlock implements IGrowable {
     }
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (world.getLight(pos.up()) >= 9 && random.nextInt(7) == 0) {
+        if (world.getLight(pos.up()) >= 9 && random.nextInt(5) == 0) {
             if (!world.isAreaLoaded(pos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
-                this.placeTree(world, pos, state, random);
+            this.placeTree(world, pos, state, random);
         }
     }
 

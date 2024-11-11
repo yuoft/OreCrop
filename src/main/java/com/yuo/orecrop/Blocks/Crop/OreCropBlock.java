@@ -92,7 +92,7 @@ public class OreCropBlock extends SweetBerryBushBlock {
     //玩家右键矿石作物收获
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (getAge(state) != 3) return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+        if (getAge(state) != 3) return ActionResultType.PASS;
         if (state.getBlock() instanceof OreCropBlock && !worldIn.isRemote){
             Block block = state.getBlock();
             Item item = null;
