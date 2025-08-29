@@ -72,7 +72,7 @@ public class OreCropBlocks {
     public static RegistryObject<Block> superCrop;
     public static RegistryObject<Block> spaceCrop;
     public static RegistryObject<Block> silverCrop;
-    public static RegistryObject<Block> copperCrop;
+    public static RegistryObject<Block> copperCrop = BLOCKS.register("copper_crop", () -> new OreCropBlock(STEM));
     public static RegistryObject<Block> rubyLeaf;
     public static RegistryObject<Block> rubySapling;
     public static RegistryObject<Block> dragonLeaf;
@@ -85,8 +85,8 @@ public class OreCropBlocks {
     public static RegistryObject<Block> spaceSapling;
     public static RegistryObject<Block> silverLeaf;
     public static RegistryObject<Block> silverSapling;
-    public static RegistryObject<Block> copperLeaf;
-    public static RegistryObject<Block> copperSapling;
+    public static RegistryObject<Block> copperLeaf = BLOCKS.register("copper_leaf", () -> new LeavesBlock(LEAF));
+    public static RegistryObject<Block> copperSapling = BLOCKS.register("copper_sapling", () -> new OreSapling(new ModTrees.CopperTree(), SAPLING));
 
     public static void registerSpaceArmsItem(){
         rubyCrop = BLOCKS.register("ruby_crop", () -> new OreCropBlock(STEM));
@@ -108,10 +108,7 @@ public class OreCropBlocks {
 
     public static void registerIafItem(){
         silverCrop = BLOCKS.register("silver_crop", () -> new OreCropBlock(STEM));
-        copperCrop = BLOCKS.register("copper_crop", () -> new OreCropBlock(STEM));
-//        silverLeaf = BLOCKS.register("silver_leaf", () -> new LeavesBlock(LEAF));
-//        silverSapling = BLOCKS.register("silver_sapling", () -> new OreSapling(new ModTrees.SilverTree(), SAPLING));
-//        copperLeaf = BLOCKS.register("copper_leaf", () -> new LeavesBlock(LEAF));
-//        copperSapling = BLOCKS.register("copper_sapling", () -> new OreSapling(new ModTrees.CopperTree(), SAPLING));
+        silverLeaf = BLOCKS.register("silver_leaf", () -> new LeavesBlock(LEAF));
+        silverSapling = BLOCKS.register("silver_sapling", () -> new OreSapling(new ModTrees.SilverTree(), SAPLING));
     }
 }

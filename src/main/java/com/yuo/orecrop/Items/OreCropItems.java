@@ -23,6 +23,7 @@ public class OreCropItems {
 	public static RegistryObject<Item> quartzNugget = ITEMS.register("quartz_nugget", OrdinaryItem::new);
 	public static RegistryObject<Item> redstoneNugget = ITEMS.register("redstone_nugget", OrdinaryItem::new);
 	public static RegistryObject<Item> netheriteNugget = ITEMS.register("netherite_nugget", OrdinaryItem::new);
+	public static RegistryObject<Item> copperNugget = ITEMS.register("copper_nugget", OrdinaryItem::new);
 	public static RegistryObject<Item> coalFruit = ITEMS.register("coal_fruit", OrdinaryItem::new);
 	public static RegistryObject<Item> diamondFruit = ITEMS.register("diamond_fruit", OrdinaryItem::new);
 	public static RegistryObject<Item> emeraldFruit = ITEMS.register("emerald_fruit", OrdinaryItem::new);
@@ -131,10 +132,10 @@ public class OreCropItems {
 	public static RegistryObject<BlockItem> silverCropSeed;
 	public static RegistryObject<BlockItem> silverLeaf;
 	public static RegistryObject<BlockItem> silverSapling;
-	public static RegistryObject<Item> copperFruit;
-	public static RegistryObject<BlockItem> copperCropSeed;
-	public static RegistryObject<BlockItem> copperLeaf;
-	public static RegistryObject<BlockItem> copperSapling;
+	public static RegistryObject<Item> copperFruit = ITEMS.register("copper_fruit", OrdinaryItem::new);
+	public static RegistryObject<BlockItem> copperCropSeed = ITEMS.register("copper_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.copperCrop.get(), GROUP));
+	public static RegistryObject<BlockItem> copperLeaf = ITEMS.register("copper_leaf", () -> new BlockItem(OreCropBlocks.copperLeaf.get(), GROUP));
+	public static RegistryObject<BlockItem> copperSapling = ITEMS.register("copper_sapling", () -> new BlockItem(OreCropBlocks.copperSapling.get(), GROUP));
 
 	public static void registerSpaceArmsItem(){
 		rubyNugget = ITEMS.register("ruby_nugget", OrdinaryItem::new);
@@ -169,9 +170,5 @@ public class OreCropItems {
 		silverCropSeed = ITEMS.register("silver_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.silverCrop.get(), GROUP));
 		silverLeaf = ITEMS.register("silver_leaf", () -> new BlockItem(OreCropBlocks.silverLeaf.get(), GROUP));
 		silverSapling = ITEMS.register("silver_sapling", () -> new BlockItem(OreCropBlocks.silverSapling.get(), GROUP));
-		copperFruit = ITEMS.register("copper_fruit", OrdinaryItem::new);
-		copperCropSeed = ITEMS.register("copper_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.copperCrop.get(), GROUP));
-		copperLeaf = ITEMS.register("copper_leaf", () -> new BlockItem(OreCropBlocks.copperLeaf.get(), GROUP));
-		copperSapling = ITEMS.register("copper_sapling", () -> new BlockItem(OreCropBlocks.copperSapling.get(), GROUP));
 	}
 }

@@ -90,13 +90,16 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    compileOnly fg.deobf("vazkii.botania:Botania:${minecraft_version}-${bot_ver}")
-    compileOnly fg.deobf("curse.maven:avaritia-endless-624491:${ra_id}")
-    compileOnly fg.deobf("curse.maven:blood-magic-224791:${bloodmagic_id}")
-    implementation fg.deobf("curse.maven:enchanted-witchcraft-560363:${enchanted_id}")
+//    compileOnly fg.deobf("curse.maven:avaritia-endless-624491:${endless_id}")
+    implementation fg.deobf("curse.maven:ice-and-fire-dragons-264231:${iaf_id}")
 
     runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_id}")
-//    runtimeOnly fg.deobf("curse.maven:avaritia-endless-624491:${ra_id}")
+    runtimeOnly fg.deobf("curse.maven:avaritia-endless-624491:${endless_id}")
+    runtimeOnly fg.deobf("curse.maven:citadel-331936:${citadel_id}")
+    runtimeOnly fg.deobf("curse.maven:curios-309927:${curios_id}")
+    runtimeOnly fg.deobf("curse.maven:codechicken-lib-1-8-242818:${ccl_id}")
+    runtimeOnly fg.deobf("curse.maven:brandons-core-231382:${bc_id}")
+    runtimeOnly fg.deobf("curse.maven:draconic-evolution-223565:${de_id}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 }
 

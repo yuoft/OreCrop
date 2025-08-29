@@ -32,8 +32,8 @@ public enum TreeFeatureConfigs implements FeatureConfiguration {
 //    XRAY_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.xrayLeaf.get().defaultBlockState(), "xray_tree"),
 //    SUPER_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.superLeaf.get().defaultBlockState(), "super_tree"),
 //    SPACE_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.spaceLeaf.get().defaultBlockState(), "space_tree"),
-//    SILVER_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.silverLeaf.get().defaultBlockState(), "silver_tree"),
-//    COPPER_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.copperLeaf.get().defaultBlockState(), "copper_tree"),
+    SILVER_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.silverLeaf.get().defaultBlockState(), "silver_tree"),
+    COPPER_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.copperLeaf.get().defaultBlockState(), "copper_tree"),
     REDSTONE_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.redstoneLeaf.get().defaultBlockState(), "redstone_tree");
 
     private final BlockState log;

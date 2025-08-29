@@ -1,5 +1,6 @@
-// 1.20.1	2025-08-28T22:41:44.5815515	Registries
+// 1.20.1	2025-08-29T11:34:58.5827926	Registries
 cb7b5023c2a3f6f44036a5ac155441f8cb022ed3 data/orecrop/worldgen/configured_feature/coal_tree.json
+83bfa1162274d8cda1fc04691718585f2007b7ea data/orecrop/worldgen/configured_feature/copper_tree.json
 914b42cfddc25349226b1443dffaf85499bb239d data/orecrop/worldgen/configured_feature/diamond_tree.json
 016ea3ecab55d7e6efe350a56b4abfad447e5b23 data/orecrop/worldgen/configured_feature/emerald_tree.json
 4f75b0402f55683f120e99adf4b488cf3212a10e data/orecrop/worldgen/configured_feature/gold_tree.json
@@ -8,3 +9,4 @@ cb7b5023c2a3f6f44036a5ac155441f8cb022ed3 data/orecrop/worldgen/configured_featur
 a2a09e727acfa3a6b9f823d790dd9f4683926f7e data/orecrop/worldgen/configured_feature/netherite_tree.json
 33845124731bd2c34cab40896b9aa560213bad8a data/orecrop/worldgen/configured_feature/quartz_tree.json
 4720accc42aceff9de947d1a1ba3ffdf3f8f7a98 data/orecrop/worldgen/configured_feature/redstone_tree.json
+78e6b84f8937f7a79a42639604d175cb0676acd0 data/orecrop/worldgen/configured_feature/silver_tree.json

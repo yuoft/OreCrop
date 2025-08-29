@@ -20,6 +20,8 @@ public class ModConfigFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> LAPIS_TREE = createKey(TreeFeatureConfigs.LAPIS_TREE.getName());
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_TREE = createKey(TreeFeatureConfigs.QUARTZ_TREE.getName());
     public static final ResourceKey<ConfiguredFeature<?, ?>> REDSTONE_TREE = createKey(TreeFeatureConfigs.REDSTONE_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COPPER_TREE = createKey(TreeFeatureConfigs.COPPER_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SILVER_TREE = createKey(TreeFeatureConfigs.SILVER_TREE.getName());
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -32,6 +34,8 @@ public class ModConfigFeatures {
         FeatureUtils.register(context, LAPIS_TREE, Feature.TREE, TreeFeatureConfigs.LAPIS_TREE.getConfig());
         FeatureUtils.register(context, QUARTZ_TREE, Feature.TREE, TreeFeatureConfigs.QUARTZ_TREE.getConfig());
         FeatureUtils.register(context, REDSTONE_TREE, Feature.TREE, TreeFeatureConfigs.REDSTONE_TREE.getConfig());
+        FeatureUtils.register(context, COPPER_TREE, Feature.TREE, TreeFeatureConfigs.COPPER_TREE.getConfig());
+        FeatureUtils.register(context, SILVER_TREE, Feature.TREE, TreeFeatureConfigs.SILVER_TREE.getConfig());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String pName) {

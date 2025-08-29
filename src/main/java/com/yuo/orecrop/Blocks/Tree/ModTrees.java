@@ -115,19 +115,19 @@ public class ModTrees {
         protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
             return Feature.TREE.place(TreeFeatureConfigs.getTree(OreCropBlocks.oreLog.get().getDefaultState(), OreCropBlocks.spaceLeaf.get().getDefaultState()));
         }
-    }
+    }*/
     public static class SilverTree extends AbstractTreeGrower{
         @Nullable
         @Override
         protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
-            return Feature.TREE.place(TreeFeatureConfigs.getTree(OreCropBlocks.oreLog.get().getDefaultState(), OreCropBlocks.silverLeaf.get().getDefaultState()));
+            return ModConfigFeatures.SILVER_TREE;
         }
     }
     public static class CopperTree extends AbstractTreeGrower{
         @Nullable
         @Override
         protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
-            return Feature.TREE.place(TreeFeatureConfigs.getTree(OreCropBlocks.oreLog.get().getDefaultState(), OreCropBlocks.copperLeaf.get().getDefaultState()));
+            return ModConfigFeatures.COPPER_TREE;
         }
-    }*/
+    }
 }
