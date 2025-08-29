@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "orecrop:block/netherite_leaf"
+  }
+}

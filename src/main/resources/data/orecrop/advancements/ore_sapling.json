@@ -1,0 +1,30 @@
+{
+  "parent": "orecrop:crop_seed",
+  "display": { 
+    "icon": { 
+      "item": "orecrop:ore_sapling"
+    },
+    "title": {
+		"translate": "advancements.orecrop.ore_sapling.title"
+	},
+    "description": {
+		"translate": "advancements.orecrop.ore_sapling.desc"
+	},
+    "frame": "task"
+  },
+  "criteria": { 
+    "ore_sapling": {
+      "trigger": "minecraft:inventory_changed", 
+      "conditions": { 
+		"items":[
+			{
+				"items":["orecrop:ore_sapling"]
+			}
+		]
+      }
+    }
+  },
+  "rewards": { 
+    "experience": 20
+  }
+}

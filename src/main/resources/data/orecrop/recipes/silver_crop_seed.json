@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "iceandfire"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zxz",
+    "xyx",
+    "zxz"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:crop_seed"
+    },
+    "x": {
+      "item": "iceandfire:silver_block"
+    },
+    "z": {
+      "item": "iceandfire:silver_ingot"
+    }
+  },
+  "result": {
+    "item": "orecrop:silver_crop_seed"
+  }
+}

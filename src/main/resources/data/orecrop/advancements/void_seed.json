@@ -1,0 +1,30 @@
+{
+  "display": { 
+    "icon": { 
+      "item": "orecrop:void_seed"
+    },
+    "title": {
+		"translate": "advancements.orecrop.void_seed.title"
+	},
+    "description": {
+		"translate": "advancements.orecrop.void_seed.desc"
+	},
+    "frame": "task",
+    "background": "textures/block/diamond_ore.png"
+  },
+  "criteria": { 
+    "void_seed": {
+      "trigger": "minecraft:inventory_changed", 
+      "conditions": { 
+		"items":[
+			{
+				"items": ["orecrop:void_seed"]
+			}
+		]
+      }
+    }
+  },
+  "rewards": { 
+    "experience": 10
+  }
+}

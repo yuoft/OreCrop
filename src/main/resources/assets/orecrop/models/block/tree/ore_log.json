@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "orecrop:block/ore_log_top",
+    "side": "orecrop:block/ore_log_side"
+  }
+}

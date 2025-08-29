@@ -1,0 +1,30 @@
+{
+  "parent": "orecrop:void_seed",
+  "display": { 
+    "icon": { 
+      "item": "orecrop:crop_seed"
+    },
+    "title": {
+		"translate": "advancements.orecrop.crop_seed.title"
+	},
+    "description": {
+		"translate": "advancements.orecrop.crop_seed.desc"
+	},
+    "frame": "task"
+  },
+  "criteria": { 
+    "crop_seed": {
+      "trigger": "minecraft:inventory_changed", 
+      "conditions": { 
+		"items":[
+			{
+				"items":["orecrop:crop_seed"]
+			}
+		]
+      }
+    }
+  },
+  "rewards": { 
+    "experience": 20
+  }
+}

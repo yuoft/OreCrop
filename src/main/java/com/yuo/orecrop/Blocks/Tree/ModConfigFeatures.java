@@ -1,0 +1,40 @@
+package com.yuo.orecrop.Blocks.Tree;
+
+import com.yuo.orecrop.OreCrop;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+
+public class ModConfigFeatures {
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> COAL_TREE = createKey(TreeFeatureConfigs.COAL_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> IRON_TREE = createKey(TreeFeatureConfigs.IRON_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GOLD_TREE = createKey(TreeFeatureConfigs.GOLD_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DIAMOND_TREE = createKey(TreeFeatureConfigs.DIAMOND_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHERITE_TREE = createKey(TreeFeatureConfigs.NETHERITE_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> EMERALD_TREE = createKey(TreeFeatureConfigs.EMERALD_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LAPIS_TREE = createKey(TreeFeatureConfigs.LAPIS_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_TREE = createKey(TreeFeatureConfigs.QUARTZ_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REDSTONE_TREE = createKey(TreeFeatureConfigs.REDSTONE_TREE.getName());
+
+
+    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        FeatureUtils.register(context, COAL_TREE, Feature.TREE, TreeFeatureConfigs.COAL_TREE.getConfig());
+        FeatureUtils.register(context, IRON_TREE, Feature.TREE, TreeFeatureConfigs.IRON_TREE.getConfig());
+        FeatureUtils.register(context, GOLD_TREE, Feature.TREE, TreeFeatureConfigs.GOLD_TREE.getConfig());
+        FeatureUtils.register(context, DIAMOND_TREE, Feature.TREE, TreeFeatureConfigs.DIAMOND_TREE.getConfig());
+        FeatureUtils.register(context, NETHERITE_TREE, Feature.TREE, TreeFeatureConfigs.NETHERITE_TREE.getConfig());
+        FeatureUtils.register(context, EMERALD_TREE, Feature.TREE, TreeFeatureConfigs.EMERALD_TREE.getConfig());
+        FeatureUtils.register(context, LAPIS_TREE, Feature.TREE, TreeFeatureConfigs.LAPIS_TREE.getConfig());
+        FeatureUtils.register(context, QUARTZ_TREE, Feature.TREE, TreeFeatureConfigs.QUARTZ_TREE.getConfig());
+        FeatureUtils.register(context, REDSTONE_TREE, Feature.TREE, TreeFeatureConfigs.REDSTONE_TREE.getConfig());
+    }
+
+    public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String pName) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(OreCrop.MOD_ID,pName));
+    }
+}

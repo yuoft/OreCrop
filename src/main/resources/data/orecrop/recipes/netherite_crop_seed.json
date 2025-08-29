@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zxz",
+    "xyx",
+    "zxz"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:crop_seed"
+    },
+    "x": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "z": {
+      "item": "minecraft:netherite_scrap"
+    }
+  },
+  "result": {
+    "item": "orecrop:netherite_crop_seed"
+  }
+}

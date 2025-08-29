@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "spacearms"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:ore_sapling"
+    },
+    "x": {
+      "item": "spacearms:super_block"
+    }
+  },
+  "result": {
+    "item": "orecrop:super_sapling"
+  }
+}

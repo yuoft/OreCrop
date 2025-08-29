@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "orecrop:block/dragon_leaf"
+  }
+}

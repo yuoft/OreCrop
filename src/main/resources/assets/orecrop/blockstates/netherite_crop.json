@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "age=0": { "model": "orecrop:block/crop/crop0" },
+    "age=1": { "model": "orecrop:block/crop/crop1" },
+    "age=2": { "model": "orecrop:block/crop/netherite_crop1" },
+    "age=3": { "model": "orecrop:block/crop/netherite_crop2" }
+  }
+}

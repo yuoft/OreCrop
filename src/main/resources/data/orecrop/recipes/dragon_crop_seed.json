@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "spacearms"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zxz",
+    "xyx",
+    "zxz"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:crop_seed"
+    },
+    "x": {
+      "item": "spacearms:dragon_block"
+    },
+    "z": {
+      "item": "spacearms:dragon_crystal"
+    }
+  },
+  "result": {
+    "item": "orecrop:dragon_crop_seed"
+  }
+}
