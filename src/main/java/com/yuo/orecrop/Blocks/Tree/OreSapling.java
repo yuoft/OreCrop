@@ -33,8 +33,8 @@ public class OreSapling extends SaplingBlock implements BonemealableBlock {
         return true;
     }
 
-    public boolean isBonemealSuccess(Level var1, RandomSource var2, BlockPos var3, BlockState var4){
-        return true;
+    public boolean isBonemealSuccess(Level var1, RandomSource random, BlockPos var3, BlockState var4){
+        return random.nextDouble() < 0.1d;
     }
 
     @Override

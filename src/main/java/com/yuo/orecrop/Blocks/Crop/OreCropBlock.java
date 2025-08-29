@@ -188,8 +188,8 @@ public class OreCropBlock extends SweetBerryBushBlock {
     //不能使用骨粉催熟
 
     @Override
-    public boolean isBonemealSuccess(Level level, RandomSource p_222559_, BlockPos p_222560_, BlockState p_222561_) {
-        return false;
+    public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos p_222560_, BlockState p_222561_) {
+        return random.nextDouble() < 0.15d;
     }
 
     public int getMaxAge() {
