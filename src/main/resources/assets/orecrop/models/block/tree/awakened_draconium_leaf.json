@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "orecrop:block/awakened_draconium_leaf"
+  }
+}

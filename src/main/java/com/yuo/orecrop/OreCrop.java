@@ -16,18 +16,30 @@ public class OreCrop {
 	public static final String MOD_ID = "orecrop";
     public static boolean IS_SPACE_ARMS = false;
     public static boolean IS_ICE_AND_FIRE = false;
+    public static boolean IS_BOT = false;
+    public static boolean IS_DE = false;
     public static final IProxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
 	public OreCrop() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         IS_SPACE_ARMS = checkMod("spacearms");
         IS_ICE_AND_FIRE = checkMod("iceandfire");
+        IS_BOT = checkMod("botania");
+        IS_DE = checkMod("draconicevolution");
         if (IS_SPACE_ARMS){
-            OreCropBlocks.registerSpaceArmsItem();
+            OreCropBlocks.registerSpaceArmsBlock();
             OreCropItems.registerSpaceArmsItem();
         }
         if (IS_ICE_AND_FIRE){
-            OreCropBlocks.registerIafItem();
+            OreCropBlocks.registerIafBlock();
             OreCropItems.registerIafItem();
+        }
+        if (IS_BOT){
+            OreCropBlocks.registerBotBlock();
+            OreCropItems.registerBotItem();
+        }
+        if (IS_DE){
+            OreCropBlocks.registerDEBlock();
+            OreCropItems.registerDEItem();
         }
 
 		//注册至mod总线

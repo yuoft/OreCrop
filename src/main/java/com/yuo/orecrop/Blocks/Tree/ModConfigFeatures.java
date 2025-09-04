@@ -23,6 +23,13 @@ public class ModConfigFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> COPPER_TREE = createKey(TreeFeatureConfigs.COPPER_TREE.getName());
     public static final ResourceKey<ConfiguredFeature<?, ?>> SILVER_TREE = createKey(TreeFeatureConfigs.SILVER_TREE.getName());
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MANASTEEL_TREE = createKey(TreeFeatureConfigs.MANASTEEL_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TERRASTEEL_TREE = createKey(TreeFeatureConfigs.TERRASTEEL_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ELEMENTIUM_TREE = createKey(TreeFeatureConfigs.ELEMENTIUM_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GAIA_TREE = createKey(TreeFeatureConfigs.GAIA_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AWAKENED_DRACONIUM_TREE = createKey(TreeFeatureConfigs.AWAKENED_DRACONIUM_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DRACONIUM_TREE = createKey(TreeFeatureConfigs.DRACONIUM_TREE.getName());
+
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         FeatureUtils.register(context, COAL_TREE, Feature.TREE, TreeFeatureConfigs.COAL_TREE.getConfig());
@@ -36,6 +43,13 @@ public class ModConfigFeatures {
         FeatureUtils.register(context, REDSTONE_TREE, Feature.TREE, TreeFeatureConfigs.REDSTONE_TREE.getConfig());
         FeatureUtils.register(context, COPPER_TREE, Feature.TREE, TreeFeatureConfigs.COPPER_TREE.getConfig());
         FeatureUtils.register(context, SILVER_TREE, Feature.TREE, TreeFeatureConfigs.SILVER_TREE.getConfig());
+
+        FeatureUtils.register(context, MANASTEEL_TREE, Feature.TREE, TreeFeatureConfigs.MANASTEEL_TREE.getConfig());
+        FeatureUtils.register(context, TERRASTEEL_TREE, Feature.TREE, TreeFeatureConfigs.TERRASTEEL_TREE.getConfig());
+        FeatureUtils.register(context, ELEMENTIUM_TREE, Feature.TREE, TreeFeatureConfigs.ELEMENTIUM_TREE.getConfig());
+        FeatureUtils.register(context, GAIA_TREE, Feature.TREE, TreeFeatureConfigs.GAIA_TREE.getConfig());
+        FeatureUtils.register(context, AWAKENED_DRACONIUM_TREE, Feature.TREE, TreeFeatureConfigs.AWAKENED_DRACONIUM_TREE.getConfig());
+        FeatureUtils.register(context, DRACONIUM_TREE, Feature.TREE, TreeFeatureConfigs.DRACONIUM_TREE.getConfig());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String pName) {

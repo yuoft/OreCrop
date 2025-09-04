@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "orecrop:block/awakened_draconium_sapling"
+  }
+}

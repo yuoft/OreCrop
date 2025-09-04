@@ -4,6 +4,7 @@ import com.yuo.orecrop.Blocks.Crop.OreCropBlock;
 import com.yuo.orecrop.Blocks.Tree.CustomSapling;
 import com.yuo.orecrop.Blocks.Tree.ModTrees;
 import com.yuo.orecrop.Blocks.Tree.OreSapling;
+import com.yuo.orecrop.OreCrop;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -14,8 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 //方块注册
 public class OreCropBlocks {
 	//同物品
-	@SuppressWarnings("deprecation")
-	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, com.yuo.orecrop.OreCrop.MOD_ID);
+	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, OreCrop.MOD_ID);
 	private static final Block.Properties STEM = Block.Properties.of().mapColor(MapColor.PLANT).strength(0.0f).randomTicks().sound(SoundType.PINK_PETALS)
             .noCollission().pushReaction(PushReaction.DESTROY);
     //      无碰撞 活塞破坏
@@ -73,6 +73,7 @@ public class OreCropBlocks {
     public static RegistryObject<Block> spaceCrop;
     public static RegistryObject<Block> silverCrop;
     public static RegistryObject<Block> copperCrop = BLOCKS.register("copper_crop", () -> new OreCropBlock(STEM));
+
     public static RegistryObject<Block> rubyLeaf;
     public static RegistryObject<Block> rubySapling;
     public static RegistryObject<Block> dragonLeaf;
@@ -88,7 +89,27 @@ public class OreCropBlocks {
     public static RegistryObject<Block> copperLeaf = BLOCKS.register("copper_leaf", () -> new LeavesBlock(LEAF));
     public static RegistryObject<Block> copperSapling = BLOCKS.register("copper_sapling", () -> new OreSapling(new ModTrees.CopperTree(), SAPLING));
 
-    public static void registerSpaceArmsItem(){
+    public static RegistryObject<Block> awakenedDraconiumCrop;
+    public static RegistryObject<Block> awakenedDraconiumLeaf;
+    public static RegistryObject<Block> awakenedDraconiumSapling;
+    public static RegistryObject<Block> draconiumCrop;
+    public static RegistryObject<Block> draconiumLeaf;
+    public static RegistryObject<Block> draconiumSapling;
+
+    public static RegistryObject<Block> manasteelCrop;
+    public static RegistryObject<Block> manasteelLeaf;
+    public static RegistryObject<Block> manasteelSapling;
+    public static RegistryObject<Block> terrasteelCrop;
+    public static RegistryObject<Block> terrasteelLeaf;
+    public static RegistryObject<Block> terrasteelSapling;
+    public static RegistryObject<Block> elementiumCrop;
+    public static RegistryObject<Block> elementiumLeaf;
+    public static RegistryObject<Block> elementiumSapling;
+    public static RegistryObject<Block> gaiaCrop;
+    public static RegistryObject<Block> gaiaLeaf;
+    public static RegistryObject<Block> gaiaSapling;
+
+    public static void registerSpaceArmsBlock(){
         rubyCrop = BLOCKS.register("ruby_crop", () -> new OreCropBlock(STEM));
         dragonCrop = BLOCKS.register("dragon_crop", () -> new OreCropBlock(STEM));
         xrayCrop = BLOCKS.register("xray_crop", () -> new OreCropBlock(STEM));
@@ -106,9 +127,33 @@ public class OreCropBlocks {
 //        spaceSapling = BLOCKS.register("space_sapling", () -> new OreSapling(new ModTrees.SpaceTree(), SAPLING));
     }
 
-    public static void registerIafItem(){
+    public static void registerIafBlock(){
         silverCrop = BLOCKS.register("silver_crop", () -> new OreCropBlock(STEM));
         silverLeaf = BLOCKS.register("silver_leaf", () -> new LeavesBlock(LEAF));
         silverSapling = BLOCKS.register("silver_sapling", () -> new OreSapling(new ModTrees.SilverTree(), SAPLING));
+    }
+
+    public static void registerBotBlock(){
+        manasteelCrop = BLOCKS.register("manasteel_crop", () -> new OreCropBlock(STEM));
+        manasteelLeaf = BLOCKS.register("manasteel_leaf", () -> new LeavesBlock(LEAF));
+        manasteelSapling = BLOCKS.register("manasteel_sapling", () -> new OreSapling(new ModTrees.ManasteelTree(), SAPLING));
+        terrasteelCrop = BLOCKS.register("terrasteel_crop", () -> new OreCropBlock(STEM));
+        terrasteelLeaf = BLOCKS.register("terrasteel_leaf", () -> new LeavesBlock(LEAF));
+        terrasteelSapling = BLOCKS.register("terrasteel_sapling", () -> new OreSapling(new ModTrees.TerrasteelTree(), SAPLING));
+        elementiumCrop = BLOCKS.register("elementium_crop", () -> new OreCropBlock(STEM));
+        elementiumLeaf = BLOCKS.register("elementium_leaf", () -> new LeavesBlock(LEAF));
+        elementiumSapling = BLOCKS.register("elementium_sapling", () -> new OreSapling(new ModTrees.ElementiumTree(), SAPLING));
+        gaiaCrop = BLOCKS.register("gaia_crop", () -> new OreCropBlock(STEM));
+        gaiaLeaf = BLOCKS.register("gaia_leaf", () -> new LeavesBlock(LEAF));
+        gaiaSapling = BLOCKS.register("gaia_sapling", () -> new OreSapling(new ModTrees.GaiaTree(), SAPLING));
+    }
+
+    public static void registerDEBlock(){
+        awakenedDraconiumCrop = BLOCKS.register("awakened_draconium_crop", () -> new OreCropBlock(STEM));
+        awakenedDraconiumLeaf = BLOCKS.register("awakened_draconium_leaf", () -> new LeavesBlock(LEAF));
+        awakenedDraconiumSapling = BLOCKS.register("awakened_draconium_sapling", () -> new OreSapling(new ModTrees.AwakenedDraconiumTree(), SAPLING));
+        draconiumCrop = BLOCKS.register("draconium_crop", () -> new OreCropBlock(STEM));
+        draconiumLeaf = BLOCKS.register("draconium_leaf", () -> new LeavesBlock(LEAF));
+        draconiumSapling = BLOCKS.register("draconium_sapling", () -> new OreSapling(new ModTrees.DraconiumTree(), SAPLING));
     }
 }

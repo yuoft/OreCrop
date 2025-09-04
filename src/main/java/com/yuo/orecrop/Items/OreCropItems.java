@@ -171,4 +171,62 @@ public class OreCropItems {
 		silverLeaf = ITEMS.register("silver_leaf", () -> new BlockItem(OreCropBlocks.silverLeaf.get(), GROUP));
 		silverSapling = ITEMS.register("silver_sapling", () -> new BlockItem(OreCropBlocks.silverSapling.get(), GROUP));
 	}
+
+	public static RegistryObject<Item>      awakenedDraconiumFruit;
+	public static RegistryObject<BlockItem> awakenedDraconiumCropSeed;
+	public static RegistryObject<BlockItem> awakenedDraconiumLeaf;
+	public static RegistryObject<BlockItem> awakenedDraconiumSapling;
+	public static RegistryObject<Item>      draconiumFruit;
+	public static RegistryObject<BlockItem> draconiumCropSeed;
+	public static RegistryObject<BlockItem> draconiumLeaf;
+	public static RegistryObject<BlockItem> draconiumSapling;
+
+	public static RegistryObject<Item>      manasteelFruit;
+	public static RegistryObject<BlockItem> manasteelCropSeed;
+	public static RegistryObject<BlockItem> manasteelLeaf;
+	public static RegistryObject<BlockItem> manasteelSapling;
+	public static RegistryObject<Item>      terrasteelFruit;
+	public static RegistryObject<BlockItem> terrasteelCropSeed;
+	public static RegistryObject<BlockItem> terrasteelLeaf;
+	public static RegistryObject<BlockItem> terrasteelSapling;
+	public static RegistryObject<Item>      elementiumFruit;
+	public static RegistryObject<BlockItem> elementiumCropSeed;
+	public static RegistryObject<BlockItem> elementiumLeaf;
+	public static RegistryObject<BlockItem> elementiumSapling;
+	public static RegistryObject<Item>      gaiaNugget;
+	public static RegistryObject<Item>      gaiaFruit;
+	public static RegistryObject<BlockItem> gaiaCropSeed;
+	public static RegistryObject<BlockItem> gaiaLeaf;
+	public static RegistryObject<BlockItem> gaiaSapling;
+
+	public static void registerDEItem(){
+		awakenedDraconiumFruit = ITEMS.register("awakened_draconium_fruit", OrdinaryItem::new);
+		awakenedDraconiumCropSeed = ITEMS.register("awakened_draconium_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.awakenedDraconiumCrop.get(), GROUP));
+		awakenedDraconiumLeaf = ITEMS.register("awakened_draconium_leaf", () -> new BlockItem(OreCropBlocks.awakenedDraconiumLeaf.get(), GROUP));
+		awakenedDraconiumSapling = ITEMS.register("awakened_draconium_sapling", () -> new BlockItem(OreCropBlocks.awakenedDraconiumSapling.get(), GROUP));
+		draconiumFruit = ITEMS.register("draconium_fruit", OrdinaryItem::new);
+		draconiumCropSeed = ITEMS.register("draconium_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.draconiumCrop.get(), GROUP));
+		draconiumLeaf = ITEMS.register("draconium_leaf", () -> new BlockItem(OreCropBlocks.draconiumLeaf.get(), GROUP));
+		draconiumSapling = ITEMS.register("draconium_sapling", () -> new BlockItem(OreCropBlocks.draconiumSapling.get(), GROUP));
+	}
+
+	public static void registerBotItem(){
+		manasteelFruit = ITEMS.register("manasteel_fruit", OrdinaryItem::new);
+		manasteelCropSeed = ITEMS.register("manasteel_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.manasteelCrop.get(), GROUP));
+		manasteelLeaf = ITEMS.register("manasteel_leaf", () -> new BlockItem(OreCropBlocks.manasteelLeaf.get(), GROUP));
+		manasteelSapling = ITEMS.register("manasteel_sapling", () -> new BlockItem(OreCropBlocks.manasteelSapling.get(), GROUP));
+		terrasteelFruit = ITEMS.register("terrasteel_fruit", OrdinaryItem::new);
+		terrasteelCropSeed = ITEMS.register("terrasteel_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.terrasteelCrop.get(), GROUP));
+		terrasteelLeaf = ITEMS.register("terrasteel_leaf", () -> new BlockItem(OreCropBlocks.terrasteelLeaf.get(), GROUP));
+		terrasteelSapling = ITEMS.register("terrasteel_sapling", () -> new BlockItem(OreCropBlocks.terrasteelSapling.get(), GROUP));
+		elementiumFruit = ITEMS.register("elementium_fruit", OrdinaryItem::new);
+		elementiumCropSeed = ITEMS.register("elementium_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.elementiumCrop.get(), GROUP));
+		elementiumLeaf = ITEMS.register("elementium_leaf", () -> new BlockItem(OreCropBlocks.elementiumLeaf.get(), GROUP));
+		elementiumSapling = ITEMS.register("elementium_sapling", () -> new BlockItem(OreCropBlocks.elementiumSapling.get(), GROUP));
+		gaiaFruit = ITEMS.register("gaia_nugget", OrdinaryItem::new);
+		gaiaFruit = ITEMS.register("gaia_fruit", OrdinaryItem::new);
+		gaiaCropSeed = ITEMS.register("gaia_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.gaiaCrop.get(), GROUP));
+		gaiaLeaf = ITEMS.register("gaia_leaf", () -> new BlockItem(OreCropBlocks.gaiaLeaf.get(), GROUP));
+		gaiaSapling = ITEMS.register("gaia_sapling", () -> new BlockItem(OreCropBlocks.gaiaSapling.get(), GROUP));
+	}
 }

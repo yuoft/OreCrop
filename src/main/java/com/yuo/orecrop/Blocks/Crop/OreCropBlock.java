@@ -171,6 +171,9 @@ public class OreCropBlock extends SweetBerryBushBlock {
                 }
             }
 
+            if (item == null) item = ItemStack.EMPTY.getItem();
+            if (blockItem == null) blockItem = ItemStack.EMPTY.getItem();
+
             RandomSource random = worldIn.random;
             int fortune = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.BLOCK_FORTUNE, player.getUseItem());
             int num = Mth.nextInt(random, 1 + Mth.nextInt(random, 0, fortune),
@@ -189,7 +192,7 @@ public class OreCropBlock extends SweetBerryBushBlock {
 
     @Override
     public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos p_222560_, BlockState p_222561_) {
-        return random.nextDouble() < 0.15d;
+        return random.nextDouble() < 0.2d;
     }
 
     public int getMaxAge() {

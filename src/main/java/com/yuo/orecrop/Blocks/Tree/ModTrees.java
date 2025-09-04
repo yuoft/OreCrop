@@ -130,4 +130,48 @@ public class ModTrees {
             return ModConfigFeatures.COPPER_TREE;
         }
     }
+
+    //联动1
+    public static class AwakenedDraconiumTree extends AbstractTreeGrower{
+        @Nullable
+        @Override
+        protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
+            return ModConfigFeatures.AWAKENED_DRACONIUM_TREE;
+        }
+    }
+    public static class DraconiumTree extends AbstractTreeGrower{
+        @Nullable
+        @Override
+        protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
+            return ModConfigFeatures.DRACONIUM_TREE;
+        }
+    }
+    public static class ManasteelTree extends AbstractTreeGrower{
+        @Nullable
+        @Override
+        protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
+            return ModConfigFeatures.MANASTEEL_TREE;
+        }
+    }
+    public static class TerrasteelTree extends AbstractTreeGrower{
+        @Nullable
+        @Override
+        protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
+            return ModConfigFeatures.TERRASTEEL_TREE;
+        }
+    }
+    public static class ElementiumTree extends AbstractTreeGrower{
+        @Nullable
+        @Override
+        protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
+            return ModConfigFeatures.ELEMENTIUM_TREE;
+        }
+    }
+    public static class GaiaTree extends AbstractTreeGrower{
+        @Nullable
+        @Override
+        protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
+            return ModConfigFeatures.GAIA_TREE;
+        }
+    }
 }
