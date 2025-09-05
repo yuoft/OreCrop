@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "draconicevolution"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "zxz",

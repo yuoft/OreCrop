@@ -10,6 +10,12 @@
     "orecrop:quartz_sapling",
     "orecrop:netherite_sapling",
     "orecrop:custom_sapling",
-    "orecrop:redstone_sapling"
+    "orecrop:redstone_sapling",
+    "orecrop:manasteel_sapling",
+    "orecrop:terrasteel_sapling",
+    "orecrop:elementium_sapling",
+    "orecrop:gaia_sapling",
+    "orecrop:awakened_draconium_sapling",
+    "orecrop:draconium_sapling"
   ]
 }
