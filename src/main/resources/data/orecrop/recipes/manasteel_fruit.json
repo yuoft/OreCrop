@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "orecrop:manasteel_fruit"
+    }
+  },
+  "result": {
+    "item": "botania:manasteel_ingot",
+    "count": 6
+  }
+}

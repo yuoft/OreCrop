@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:ore_sapling"
+    },
+    "x": {
+      "item": "draconicevolution:draconium_block"
+    }
+  },
+  "result": {
+    "item": "orecrop:draconium_sapling"
+  }
+}

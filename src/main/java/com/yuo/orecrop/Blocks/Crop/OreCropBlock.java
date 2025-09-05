@@ -170,6 +170,34 @@ public class OreCropBlock extends SweetBerryBushBlock {
                     blockItem = OreCropItems.copperCropSeed.get();
                 }
             }
+            if (OreCrop.IS_BOT){
+                if (block.equals(OreCropBlocks.manasteelCrop.get())){
+                    item = OreCropItems.manasteelFruit.get();
+                    blockItem = OreCropItems.manasteelCropSeed.get();
+                }
+                if (block.equals(OreCropBlocks.terrasteelCrop.get())){
+                    item = OreCropItems.terrasteelFruit.get();
+                    blockItem = OreCropItems.terrasteelCropSeed.get();
+                }
+                if (block.equals(OreCropBlocks.elementiumCrop.get())){
+                    item = OreCropItems.elementiumFruit.get();
+                    blockItem = OreCropItems.elementiumCropSeed.get();
+                }
+                if (block.equals(OreCropBlocks.gaiaCrop.get())){
+                    item = OreCropItems.gaiaFruit.get();
+                    blockItem = OreCropItems.gaiaCropSeed.get();
+                }
+            }
+            if (OreCrop.IS_DE){
+                if (block.equals(OreCropBlocks.awakenedDraconiumCrop.get())){
+                    item = OreCropItems.awakenedDraconiumFruit.get();
+                    blockItem = OreCropItems.awakenedDraconiumCropSeed.get();
+                }
+                if (block.equals(OreCropBlocks.draconiumCrop.get())){
+                    item = OreCropItems.draconiumFruit.get();
+                    blockItem = OreCropItems.draconiumCropSeed.get();
+                }
+            }
 
             if (item == null) item = ItemStack.EMPTY.getItem();
             if (blockItem == null) blockItem = ItemStack.EMPTY.getItem();

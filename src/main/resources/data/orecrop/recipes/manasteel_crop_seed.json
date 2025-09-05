@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zxz",
+    "xyx",
+    "zxz"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:crop_seed"
+    },
+    "x": {
+      "item": "botania:manasteel_block"
+    },
+    "z": {
+      "item": "botania:manasteel_ingot"
+    }
+  },
+  "result": {
+    "item": "orecrop:manasteel_crop_seed"
+  }
+}

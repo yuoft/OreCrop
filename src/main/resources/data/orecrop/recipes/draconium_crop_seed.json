@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zxz",
+    "xyx",
+    "zxz"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:crop_seed"
+    },
+    "x": {
+      "item": "draconicevolution:draconium_block"
+    },
+    "z": {
+      "item": "draconicevolution:draconium_ingot"
+    }
+  },
+  "result": {
+    "item": "orecrop:draconium_crop_seed"
+  }
+}

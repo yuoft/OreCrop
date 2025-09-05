@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "orecrop:terrasteel_fruit"
+    }
+  },
+  "result": {
+    "item": "botania:terrasteel_ingot",
+    "count": 5
+  }
+}

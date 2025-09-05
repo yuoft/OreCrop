@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "zxz",
+    "xyx",
+    "zxz"
+  ],
+  "key": {
+    "y": {
+      "item": "orecrop:crop_seed"
+    },
+    "x": {
+      "item": "botania:terrasteel_block"
+    },
+    "z": {
+      "item": "botania:terrasteel_ingot"
+    }
+  },
+  "result": {
+    "item": "orecrop:terrasteel_crop_seed"
+  }
+}

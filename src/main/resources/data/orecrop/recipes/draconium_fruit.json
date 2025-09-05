@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "orecrop:draconium_fruit"
+    }
+  },
+  "result": {
+    "item": "draconicevolution:draconium_ingot",
+    "count": 5
+  }
+}
