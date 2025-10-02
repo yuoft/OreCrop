@@ -91,7 +91,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
 //    compileOnly fg.deobf("curse.maven:avaritia-endless-624491:${endless_id}")
-    implementation fg.deobf("curse.maven:ice-and-fire-dragons-264231:${iaf_id}")
+    compileOnly fg.deobf("curse.maven:ice-and-fire-dragons-264231:${iaf_id}")
 
     runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_id}")
     runtimeOnly fg.deobf("curse.maven:avaritia-endless-624491:${endless_id}")

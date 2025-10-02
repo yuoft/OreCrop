@@ -1,7 +1,9 @@
 package com.yuo.orecrop.Blocks.Tree;
 
 import com.yuo.orecrop.Blocks.OreCropBlocks;
+import com.yuo.orecrop.OreCrop;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
@@ -27,22 +29,22 @@ public enum TreeFeatureConfigs implements FeatureConfiguration {
     LAPIS_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.lapisLeaf.get().defaultBlockState(), "lapis_tree"),
     QUARTZ_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.quartzLeaf.get().defaultBlockState(), "quartz_tree"),
     NETHERITE_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.netheriteLeaf.get().defaultBlockState(), "netherite_tree"),
-//    RUBY_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.rubyLeaf.get().defaultBlockState(), "ruby_tree"),
-//    DRAGON_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.dragonLeaf.get().defaultBlockState(), "dragon_tree"),
-//    XRAY_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.xrayLeaf.get().defaultBlockState(), "xray_tree"),
-//    SUPER_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.superLeaf.get().defaultBlockState(), "super_tree"),
-//    SPACE_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.spaceLeaf.get().defaultBlockState(), "space_tree"),
-    SILVER_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.silverLeaf.get().defaultBlockState(), "silver_tree"),
-    COPPER_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.copperLeaf.get().defaultBlockState(), "copper_tree"),
     REDSTONE_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.redstoneLeaf.get().defaultBlockState(), "redstone_tree"),
+    //    RUBY_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.rubyLeaf.get().defaultBlockState(), "ruby_tree"),
+    //    DRAGON_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.dragonLeaf.get().defaultBlockState(), "dragon_tree"),
+    //    XRAY_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.xrayLeaf.get().defaultBlockState(), "xray_tree"),
+    //    SUPER_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.superLeaf.get().defaultBlockState(), "super_tree"),
+    //    SPACE_TREE(BlockRegistry.oreLog.get().defaultBlockState(), BlockRegistry.spaceLeaf.get().defaultBlockState(), "space_tree"),
+    SILVER_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), !OreCrop.IS_ICE_AND_FIRE ? Blocks.OAK_LEAVES.defaultBlockState() : OreCropBlocks.silverLeaf.get().defaultBlockState(), "silver_tree"),
+    COPPER_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), !OreCrop.IS_ICE_AND_FIRE ? Blocks.OAK_LEAVES.defaultBlockState() : OreCropBlocks.copperLeaf.get().defaultBlockState(), "copper_tree"),
 
 
-    MANASTEEL_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.manasteelLeaf.get().defaultBlockState(), "manasteel_tree"),
-    TERRASTEEL_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.terrasteelLeaf.get().defaultBlockState(), "terrasteel_tree"),
-    ELEMENTIUM_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.elementiumLeaf.get().defaultBlockState(), "elementium_tree"),
-    GAIA_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.gaiaLeaf.get().defaultBlockState(), "gaia_tree"),
-    AWAKENED_DRACONIUM_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.awakenedDraconiumLeaf.get().defaultBlockState(), "awakened_draconium_tree"),
-    DRACONIUM_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), OreCropBlocks.draconiumLeaf.get().defaultBlockState(), "draconium_tree");
+    MANASTEEL_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), !OreCrop.IS_BOT ? Blocks.OAK_LEAVES.defaultBlockState() : OreCropBlocks.manasteelLeaf.get().defaultBlockState(), "manasteel_tree"),
+    TERRASTEEL_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), !OreCrop.IS_BOT ? Blocks.OAK_LEAVES.defaultBlockState() : OreCropBlocks.terrasteelLeaf.get().defaultBlockState(), "terrasteel_tree"),
+    ELEMENTIUM_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), !OreCrop.IS_BOT ? Blocks.OAK_LEAVES.defaultBlockState() : OreCropBlocks.elementiumLeaf.get().defaultBlockState(), "elementium_tree"),
+    GAIA_TREE(OreCropBlocks.oreLog.get().defaultBlockState(),!OreCrop.IS_BOT ? Blocks.OAK_LEAVES.defaultBlockState() :  OreCropBlocks.gaiaLeaf.get().defaultBlockState(), "gaia_tree"),
+    AWAKENED_DRACONIUM_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), !OreCrop.IS_DE ? Blocks.OAK_LEAVES.defaultBlockState() : OreCropBlocks.awakenedDraconiumLeaf.get().defaultBlockState(), "awakened_draconium_tree"),
+    DRACONIUM_TREE(OreCropBlocks.oreLog.get().defaultBlockState(), !OreCrop.IS_DE ? Blocks.OAK_LEAVES.defaultBlockState() : OreCropBlocks.draconiumLeaf.get().defaultBlockState(), "draconium_tree");
 
     private final BlockState log;
     private final BlockState leaves;
