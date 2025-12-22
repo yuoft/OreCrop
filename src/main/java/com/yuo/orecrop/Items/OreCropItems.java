@@ -36,10 +36,6 @@ public class OreCropItems {
 	public static RegistryObject<Item> cropSeed = ITEMS.register("crop_seed", OrdinaryItem::new);
 	public static RegistryObject<Item> oreSapling = ITEMS.register("ore_sapling", OrdinaryItem::new);
 
-	//注册方块物品
-//	public static RegistryObject<BlockItem> coalLeanOre = ITEMS.register("coal_lean_ore",
-//			() -> new BlockItem(BlockRegistry.coalLeanOre.get(), GROUP));
-
 	public static RegistryObject<BlockItem> customSapling = ITEMS.register("custom_sapling",
 			() -> new CustomSapling(OreCropBlocks.customSapling.get(), GROUP));
 
@@ -223,7 +219,7 @@ public class OreCropItems {
 		elementiumCropSeed = ITEMS.register("elementium_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.elementiumCrop.get(), GROUP));
 		elementiumLeaf = ITEMS.register("elementium_leaf", () -> new BlockItem(OreCropBlocks.elementiumLeaf.get(), GROUP));
 		elementiumSapling = ITEMS.register("elementium_sapling", () -> new BlockItem(OreCropBlocks.elementiumSapling.get(), GROUP));
-		gaiaFruit = ITEMS.register("gaia_nugget", OrdinaryItem::new);
+		gaiaNugget = ITEMS.register("gaia_nugget", OrdinaryItem::new);
 		gaiaFruit = ITEMS.register("gaia_fruit", OrdinaryItem::new);
 		gaiaCropSeed = ITEMS.register("gaia_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.gaiaCrop.get(), GROUP));
 		gaiaLeaf = ITEMS.register("gaia_leaf", () -> new BlockItem(OreCropBlocks.gaiaLeaf.get(), GROUP));

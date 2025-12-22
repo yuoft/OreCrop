@@ -68,6 +68,7 @@ public class OreCropBlock extends SweetBerryBushBlock {
         if (block.equals(OreCropBlocks.quartzCrop.get()))  item = OreCropItems.quartzFruit.get();
         if (block.equals(OreCropBlocks.redstoneCrop.get())) item = OreCropItems.redstoneFruit.get();
         if (block.equals(OreCropBlocks.netheriteCrop.get())) item = OreCropItems.netheriteFruit.get();
+        if (block.equals(OreCropBlocks.copperCrop.get())) item = OreCropItems.copperFruit.get();
         if (OreCrop.IS_SPACE_ARMS){
             if (block.equals(OreCropBlocks.rubyCrop.get())) item = OreCropItems.rubyFruit.get();
             if (block.equals(OreCropBlocks.xrayCrop.get())) item = OreCropItems.xrayFruit.get();
@@ -77,8 +78,18 @@ public class OreCropBlock extends SweetBerryBushBlock {
         }
         if (OreCrop.IS_ICE_AND_FIRE){
             if (block.equals(OreCropBlocks.silverCrop.get())) item = OreCropItems.silverFruit.get();
-            if (block.equals(OreCropBlocks.copperCrop.get())) item = OreCropItems.copperFruit.get();
         }
+        if (OreCrop.IS_BOT){
+            if (block.equals(OreCropBlocks.manasteelCrop.get())) item = OreCropItems.manasteelFruit.get();
+            if (block.equals(OreCropBlocks.terrasteelCrop.get())) item = OreCropItems.terrasteelFruit.get();
+            if (block.equals(OreCropBlocks.elementiumCrop.get())) item = OreCropItems.elementiumFruit.get();
+            if (block.equals(OreCropBlocks.gaiaCrop.get())) item = OreCropItems.gaiaFruit.get();
+        }
+        if (OreCrop.IS_DE){
+            if (block.equals(OreCropBlocks.draconiumCrop.get())) item = OreCropItems.draconiumFruit.get();
+            if (block.equals(OreCropBlocks.awakenedDraconiumCrop.get())) item = OreCropItems.awakenedDraconiumFruit.get();
+        }
+
         ItemStack stack = new ItemStack(item, Mth.nextInt(builder.getLevel().random, 1, 5));
         List<ItemStack> list = new ArrayList<>();
         list.add(stack);

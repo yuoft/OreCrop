@@ -80,42 +80,42 @@ public class ModTrees {
             return ModConfigFeatures.REDSTONE_TREE;
         }
     }
-    /*
     public static class RubyTree extends AbstractTreeGrower{
         @Nullable
         @Override
         protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
-            return ModConfigFeatures.createKey(TreeFeatureConfigs.getTree(OreCropBlocks.oreLog.get().getDefaultState(), OreCropBlocks.rubyLeaf.get().getDefaultState()));
+            return ModConfigFeatures.RUBY_TREE;
         }
     }
     public static class DragonTree extends AbstractTreeGrower{
         @Nullable
         @Override
         protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
-            return Feature.TREE.place(TreeFeatureConfigs.getTree(OreCropBlocks.oreLog.get().getDefaultState(), OreCropBlocks.dragonLeaf.get().getDefaultState()));
+            return ModConfigFeatures.DRAGON_TREE;
         }
     }
     public static class XrayTree extends AbstractTreeGrower{
         @Nullable
         @Override
         protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
-            return Feature.TREE.place(TreeFeatureConfigs.getTree(OreCropBlocks.oreLog.get().getDefaultState(), OreCropBlocks.xrayLeaf.get().getDefaultState()));
+            return ModConfigFeatures.XRAY_TREE;
         }
     }
     public static class SuperTree extends AbstractTreeGrower{
         @Nullable
         @Override
         protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
-            return Feature.TREE.place(TreeFeatureConfigs.getTree(OreCropBlocks.oreLog.get().getDefaultState(), OreCropBlocks.superLeaf.get().getDefaultState()));
+            return ModConfigFeatures.SUPER_TREE;
         }
     }
     public static class SpaceTree extends AbstractTreeGrower{
         @Nullable
         @Override
         protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomIn, boolean flag) {
-            return Feature.TREE.place(TreeFeatureConfigs.getTree(OreCropBlocks.oreLog.get().getDefaultState(), OreCropBlocks.spaceLeaf.get().getDefaultState()));
+            return ModConfigFeatures.SPACE_TREE;
         }
-    }*/
+    }
+
     public static class SilverTree extends AbstractTreeGrower{
         @Nullable
         @Override

@@ -116,15 +116,15 @@ public class OreCropBlocks {
         superCrop = BLOCKS.register("super_crop", () -> new OreCropBlock(STEM));
         spaceCrop = BLOCKS.register("space_crop", () -> new OreCropBlock(STEM));
         rubyLeaf = BLOCKS.register("ruby_leaf", () -> new LeavesBlock(LEAF));
-//        rubySapling = BLOCKS.register("ruby_sapling", () -> new OreSapling(new ModTrees.RubyTree(), SAPLING));
-//        dragonLeaf = BLOCKS.register("dragon_leaf", () -> new LeavesBlock(LEAF));
-//        dragonSapling = BLOCKS.register("dragon_sapling", () -> new OreSapling(new ModTrees.DragonTree(), SAPLING));
-//        xrayLeaf = BLOCKS.register("xray_leaf", () -> new LeavesBlock(LEAF));
-//        xraySapling = BLOCKS.register("xray_sapling", () -> new OreSapling(new ModTrees.XrayTree(), SAPLING));
-//        superLeaf = BLOCKS.register("super_leaf", () -> new LeavesBlock(LEAF));
-//        superSapling = BLOCKS.register("super_sapling", () -> new OreSapling(new ModTrees.SuperTree(), SAPLING));
-//        spaceLeaf = BLOCKS.register("space_leaf", () -> new LeavesBlock(LEAF));
-//        spaceSapling = BLOCKS.register("space_sapling", () -> new OreSapling(new ModTrees.SpaceTree(), SAPLING));
+        rubySapling = BLOCKS.register("ruby_sapling", () -> new OreSapling(new ModTrees.RubyTree(), SAPLING));
+        dragonLeaf = BLOCKS.register("dragon_leaf", () -> new LeavesBlock(LEAF));
+        dragonSapling = BLOCKS.register("dragon_sapling", () -> new OreSapling(new ModTrees.DragonTree(), SAPLING));
+        xrayLeaf = BLOCKS.register("xray_leaf", () -> new LeavesBlock(LEAF));
+        xraySapling = BLOCKS.register("xray_sapling", () -> new OreSapling(new ModTrees.XrayTree(), SAPLING));
+        superLeaf = BLOCKS.register("super_leaf", () -> new LeavesBlock(LEAF));
+        superSapling = BLOCKS.register("super_sapling", () -> new OreSapling(new ModTrees.SuperTree(), SAPLING));
+        spaceLeaf = BLOCKS.register("space_leaf", () -> new LeavesBlock(LEAF));
+        spaceSapling = BLOCKS.register("space_sapling", () -> new OreSapling(new ModTrees.SpaceTree(), SAPLING));
     }
 
     public static void registerIafBlock(){

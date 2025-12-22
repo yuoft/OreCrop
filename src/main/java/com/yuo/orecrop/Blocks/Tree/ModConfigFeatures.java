@@ -21,12 +21,20 @@ public class ModConfigFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_TREE = createKey(TreeFeatureConfigs.QUARTZ_TREE.getName());
     public static final ResourceKey<ConfiguredFeature<?, ?>> REDSTONE_TREE = createKey(TreeFeatureConfigs.REDSTONE_TREE.getName());
     public static final ResourceKey<ConfiguredFeature<?, ?>> COPPER_TREE = createKey(TreeFeatureConfigs.COPPER_TREE.getName());
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> SILVER_TREE = createKey(TreeFeatureConfigs.SILVER_TREE.getName());
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_TREE = createKey(TreeFeatureConfigs.RUBY_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DRAGON_TREE = createKey(TreeFeatureConfigs.DRAGON_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> XRAY_TREE = createKey(TreeFeatureConfigs.XRAY_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SUPER_TREE = createKey(TreeFeatureConfigs.SUPER_TREE.getName());
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SPACE_TREE = createKey(TreeFeatureConfigs.SPACE_TREE.getName());
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> MANASTEEL_TREE = createKey(TreeFeatureConfigs.MANASTEEL_TREE.getName());
     public static final ResourceKey<ConfiguredFeature<?, ?>> TERRASTEEL_TREE = createKey(TreeFeatureConfigs.TERRASTEEL_TREE.getName());
     public static final ResourceKey<ConfiguredFeature<?, ?>> ELEMENTIUM_TREE = createKey(TreeFeatureConfigs.ELEMENTIUM_TREE.getName());
     public static final ResourceKey<ConfiguredFeature<?, ?>> GAIA_TREE = createKey(TreeFeatureConfigs.GAIA_TREE.getName());
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> AWAKENED_DRACONIUM_TREE = createKey(TreeFeatureConfigs.AWAKENED_DRACONIUM_TREE.getName());
     public static final ResourceKey<ConfiguredFeature<?, ?>> DRACONIUM_TREE = createKey(TreeFeatureConfigs.DRACONIUM_TREE.getName());
 
@@ -42,7 +50,13 @@ public class ModConfigFeatures {
         FeatureUtils.register(context, QUARTZ_TREE, Feature.TREE, TreeFeatureConfigs.QUARTZ_TREE.getConfig());
         FeatureUtils.register(context, REDSTONE_TREE, Feature.TREE, TreeFeatureConfigs.REDSTONE_TREE.getConfig());
         FeatureUtils.register(context, COPPER_TREE, Feature.TREE, TreeFeatureConfigs.COPPER_TREE.getConfig());
+
         FeatureUtils.register(context, SILVER_TREE, Feature.TREE, TreeFeatureConfigs.SILVER_TREE.getConfig());
+        FeatureUtils.register(context, RUBY_TREE, Feature.TREE, TreeFeatureConfigs.RUBY_TREE.getConfig());
+        FeatureUtils.register(context, DRAGON_TREE, Feature.TREE, TreeFeatureConfigs.DRAGON_TREE.getConfig());
+        FeatureUtils.register(context, XRAY_TREE, Feature.TREE, TreeFeatureConfigs.XRAY_TREE.getConfig());
+        FeatureUtils.register(context, SUPER_TREE, Feature.TREE, TreeFeatureConfigs.SUPER_TREE.getConfig());
+        FeatureUtils.register(context, SPACE_TREE, Feature.TREE, TreeFeatureConfigs.SPACE_TREE.getConfig());
 
         FeatureUtils.register(context, MANASTEEL_TREE, Feature.TREE, TreeFeatureConfigs.MANASTEEL_TREE.getConfig());
         FeatureUtils.register(context, TERRASTEEL_TREE, Feature.TREE, TreeFeatureConfigs.TERRASTEEL_TREE.getConfig());
