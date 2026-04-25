@@ -33,6 +33,7 @@ public class OreCropItems {
 	public static RegistryObject<Item> quartzFruit = ITEMS.register("quartz_fruit", OrdinaryItem::new);
 	public static RegistryObject<Item> redstoneFruit = ITEMS.register("redstone_fruit", OrdinaryItem::new);
 	public static RegistryObject<Item> netheriteFruit = ITEMS.register("netherite_fruit", OrdinaryItem::new);
+	public static RegistryObject<Item> copperFruit = ITEMS.register("copper_fruit", OrdinaryItem::new);
 	public static RegistryObject<Item> cropSeed = ITEMS.register("crop_seed", OrdinaryItem::new);
 	public static RegistryObject<Item> oreSapling = ITEMS.register("ore_sapling", OrdinaryItem::new);
 
@@ -58,6 +59,8 @@ public class OreCropItems {
 			() -> new ItemNameBlockItem(OreCropBlocks.redstoneCrop.get(), GROUP));
 	public static RegistryObject<BlockItem> netheriteCropSeed = ITEMS.register("netherite_crop_seed",
 			() -> new ItemNameBlockItem(OreCropBlocks.netheriteCrop.get(), GROUP));
+	public static RegistryObject<BlockItem> copperCropSeed = ITEMS.register("copper_crop_seed",
+			() -> new ItemNameBlockItem(OreCropBlocks.copperCrop.get(), GROUP));
 
 	//矿石树
 	public static RegistryObject<BlockItem> oreLog = ITEMS.register("ore_log",
@@ -98,6 +101,11 @@ public class OreCropItems {
 			() -> new BlockItem(OreCropBlocks.netheriteLeaf.get(), GROUP));
 	public static RegistryObject<BlockItem> netheriteSapling = ITEMS.register("netherite_sapling",
 			() -> new BlockItem(OreCropBlocks.netheriteSapling.get(), GROUP));
+	public static RegistryObject<BlockItem> copperLeaf = ITEMS.register("copper_leaf",
+			() -> new BlockItem(OreCropBlocks.copperLeaf.get(), GROUP));
+	public static RegistryObject<BlockItem> copperSapling = ITEMS.register("copper_sapling",
+			() -> new BlockItem(OreCropBlocks.copperSapling.get(), GROUP));
+
 
 	public static RegistryObject<Item> rubyNugget;
 	public static RegistryObject<Item> rubyFruit;
@@ -128,10 +136,6 @@ public class OreCropItems {
 	public static RegistryObject<BlockItem> silverCropSeed;
 	public static RegistryObject<BlockItem> silverLeaf;
 	public static RegistryObject<BlockItem> silverSapling;
-	public static RegistryObject<Item> copperFruit = ITEMS.register("copper_fruit", OrdinaryItem::new);
-	public static RegistryObject<BlockItem> copperCropSeed = ITEMS.register("copper_crop_seed", () -> new ItemNameBlockItem(OreCropBlocks.copperCrop.get(), GROUP));
-	public static RegistryObject<BlockItem> copperLeaf = ITEMS.register("copper_leaf", () -> new BlockItem(OreCropBlocks.copperLeaf.get(), GROUP));
-	public static RegistryObject<BlockItem> copperSapling = ITEMS.register("copper_sapling", () -> new BlockItem(OreCropBlocks.copperSapling.get(), GROUP));
 
 	public static void registerSpaceArmsItem(){
 		rubyNugget = ITEMS.register("ruby_nugget", OrdinaryItem::new);

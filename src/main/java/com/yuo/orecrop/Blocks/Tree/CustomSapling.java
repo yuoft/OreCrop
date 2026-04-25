@@ -1,9 +1,7 @@
 package com.yuo.orecrop.Blocks.Tree;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -12,17 +10,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import java.util.Random;
 
 public class CustomSapling extends Block {
     public CustomSapling() {
@@ -41,10 +35,6 @@ public class CustomSapling extends Block {
         return !worldReader.getBlockState(blockpos).isAir();
     }
 
-    protected boolean mayPlaceOn(BlockState state, BlockGetter getter, BlockPos pos) {
-        return state.is(BlockTags.DIRT) || state.is(Blocks.FARMLAND);
-    }
-
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult traceResult) {
         ItemStack heldItem = player.getItemInHand(hand);
@@ -54,7 +44,8 @@ public class CustomSapling extends Block {
                 world.addParticle(ParticleTypes.COMPOSTER, pos.getX() + random.nextDouble() / 2, pos.getY() + random.nextDouble() / 2, pos.getZ() + random.nextDouble() / 2, 0.05D, 0.05D, 0.05D);
             }
             growTree(world, pos.below(), world.getBlockState(pos.below()), random);
-            heldItem.shrink(1);
+            if (!player.getAbilities().instabuild)
+                heldItem.shrink(1);
             player.swing(hand);
             return InteractionResult.SUCCESS;
         }

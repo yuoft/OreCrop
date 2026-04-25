@@ -90,10 +90,14 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    implementation fg.deobf("curse.maven:ice-and-fire-dragons-264231:${iaf_id}")
-    implementation fg.deobf("vazkii.botania:Botania:${minecraft_version}-${bot_ver}")
-    implementation fg.deobf("com.yuo.spacearms:spacearms:1.20.1-0.1")
+    compileOnly fg.deobf("curse.maven:ice-and-fire-dragons-264231:${iaf_id}")
+    compileOnly fg.deobf("vazkii.botania:Botania:${minecraft_version}-${bot_ver}")
+    compileOnly fg.deobf("com.yuo.spacearms:spacearms:1.20.1-0.1")
 
+    runtimeOnly fg.deobf("curse.maven:ice-and-fire-dragons-264231:${iaf_id}")
+    runtimeOnly fg.deobf("vazkii.botania:Botania:${minecraft_version}-${bot_ver}")
+//    runtimeOnly fg.deobf("com.yuo.spacearms:spacearms:1.20.1-0.1")
+//    runtimeOnly fg.deobf("curse.maven:lmft-656346:${lmft_id}")
     runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_id}")
     runtimeOnly fg.deobf("curse.maven:avaritia-endless-624491:${endless_id}")
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${minecraft_version}-${patchouli_ver}")
@@ -101,7 +105,7 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:curios-309927:${curios_id}")
     runtimeOnly fg.deobf("curse.maven:codechicken-lib-1-8-242818:${ccl_id}")
     runtimeOnly fg.deobf("curse.maven:brandons-core-231382:${bc_id}")
-    runtimeOnly fg.deobf("curse.maven:draconic-evolution-223565:${de_id}")
+//    runtimeOnly fg.deobf("curse.maven:draconic-evolution-223565:${de_id}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
     runtimeOnly fg.deobf("curse.maven:the-twilight-forest-227639:${tf_id}")
 }

@@ -20,6 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
 /**
  * 客户端属性注册
  */
+@SuppressWarnings("removal")
 public class ClientProxy implements IProxy {
 
     @Override

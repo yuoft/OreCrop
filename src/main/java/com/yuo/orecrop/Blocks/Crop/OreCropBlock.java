@@ -17,6 +17,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
@@ -27,6 +28,7 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.loot.LootParams.Builder;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -57,7 +59,7 @@ public class OreCropBlock extends SweetBerryBushBlock {
     @Override
     public List<ItemStack> getDrops(BlockState state, Builder builder) {
         if (getAge(state) < 3) return Collections.singletonList(new ItemStack(this)); //不成熟，不掉落产物
-        Item item = null;
+        Item item = Items.AIR;
         Block block = state.getBlock();
         if (block.equals(OreCropBlocks.coalCrop.get())) item = OreCropItems.coalFruit.get();
         if (block.equals(OreCropBlocks.diamondCrop.get())) item = OreCropItems.diamondFruit.get();
@@ -104,9 +106,8 @@ public class OreCropBlock extends SweetBerryBushBlock {
     }
 
     //玩家右键矿石作物收获
-
     @Override
-    public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
+    public @NotNull InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
         if (getAge(state) != 3) return InteractionResult.PASS;
         if (state.getBlock() instanceof OreCropBlock && !worldIn.isClientSide){
             Block block = state.getBlock();
@@ -149,6 +150,10 @@ public class OreCropBlock extends SweetBerryBushBlock {
                 item = OreCropItems.netheriteFruit.get();
                 blockItem = OreCropItems.netheriteCropSeed.get();
             }
+            if (block.equals(OreCropBlocks.copperCrop.get())){
+                item = OreCropItems.copperFruit.get();
+                blockItem = OreCropItems.copperCropSeed.get();
+            }
             if (OreCrop.IS_SPACE_ARMS){
                 if (block.equals(OreCropBlocks.rubyCrop.get())){
                     item = OreCropItems.rubyFruit.get();
@@ -175,10 +180,6 @@ public class OreCropBlock extends SweetBerryBushBlock {
                 if (block.equals(OreCropBlocks.silverCrop.get())){
                     item = OreCropItems.silverFruit.get();
                     blockItem = OreCropItems.silverCropSeed.get();
-                }
-                if (block.equals(OreCropBlocks.copperCrop.get())){
-                    item = OreCropItems.copperFruit.get();
-                    blockItem = OreCropItems.copperCropSeed.get();
                 }
             }
             if (OreCrop.IS_BOT){
@@ -214,7 +215,7 @@ public class OreCropBlock extends SweetBerryBushBlock {
             if (blockItem == null) blockItem = ItemStack.EMPTY.getItem();
 
             RandomSource random = worldIn.random;
-            int fortune = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.BLOCK_FORTUNE, player.getUseItem());
+            int fortune = player.getUseItem().getEnchantmentLevel(Enchantments.BLOCK_FORTUNE);
             int num = Mth.nextInt(random, 1 + Mth.nextInt(random, 0, fortune),
                     8 + 3 * (Mth.nextInt(random, 0, fortune) + 1));
             popResource(worldIn, pos, new ItemStack(item, num));

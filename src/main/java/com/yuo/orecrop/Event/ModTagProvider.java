@@ -4,21 +4,16 @@ import com.yuo.orecrop.Blocks.OreCropBlocks;
 import com.yuo.orecrop.OreCrop;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.resources.ResourceKey;
+import net.minecraft.data.tags.VanillaBlockTagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModTagProvider extends BlockTagsProvider {
+public class ModTagProvider extends VanillaBlockTagsProvider {
 
-    public ModTagProvider(PackOutput output, CompletableFuture<Provider> lookupProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, modId, existingFileHelper);
+    public ModTagProvider(PackOutput output, CompletableFuture<Provider> lookupProvider) {
+        super(output, lookupProvider);
     }
 
     @Override

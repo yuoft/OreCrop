@@ -89,6 +89,7 @@ public class ModBlockLTProvider extends BlockLootSubProvider {
     }
 
 
+    @SuppressWarnings("removal")
     @Override
     protected void generate() {
         add(OreCropBlocks.oreLog.get(), this.createSingleItemTable(OreCropBlocks.oreLog.get()));

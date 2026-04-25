@@ -19,7 +19,8 @@ public class OreCrop {
     public static boolean IS_BOT = false;
     public static boolean IS_DE = false;
     public static final IProxy proxy = DistExecutor.safeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
-	public OreCrop() {
+    @SuppressWarnings("removal")
+    public OreCrop() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         IS_SPACE_ARMS = checkMod("spacearms");
         IS_ICE_AND_FIRE = checkMod("iceandfire");
